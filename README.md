@@ -3,7 +3,7 @@
 Mirror podcast RSS feeds that are unreachable from the Miniflux server (blocked
 or proxy-dependent sources) into this repo, served via jsDelivr CDN.
 
-Feeds are refreshed every 2 hours by GitHub Actions; only valid RSS/Atom XML is
+Feeds are refreshed every 7 hours by GitHub Actions; only valid RSS/Atom XML is
 committed, and failed fetches keep the last known good file.
 
 Subscribe via jsDelivr:
