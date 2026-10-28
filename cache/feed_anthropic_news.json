@@ -1,0 +1,196 @@
+{
+ "entries": [
+  {
+   "title": "Early progress on accelerating drug development with Claude",
+   "link": "https://www.anthropic.com/research/early-progress-drug-development",
+   "description": "We're at the start of a major effort to speed up drug development with Claude. Over the past several months, our scientists have engaged in deep research partnerships with six organizations developing new medicines.",
+   "date": "2026-10-27T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/research/early-progress-drug-development"
+  },
+  {
+   "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+   "link": "https://www.anthropic.com/news/expanding-partnership-gsa",
+   "description": "We are expanding our partnership with the General Services Administration (GSA) through a new agreement that gives government partners a 40% discount on Claude Enterprise, Claude for Government, and the Claude API.",
+   "date": "2026-10-27T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/expanding-partnership-gsa"
+  },
+  {
+   "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+   "link": "https://www.anthropic.com/news/s1-sec",
+   "description": "Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial public offering of its Class A common stock.",
+   "date": "2026-10-26T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/s1-sec"
+  },
+  {
+   "title": "Donating Agent Skills to the Agentic AI Foundation",
+   "link": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+   "description": "We’re donating Agent Skills, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation. More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the standard in December 2025.",
+   "date": "2026-10-22T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+  },
+  {
+   "title": "Open call for guest investigators in the life sciences",
+   "link": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+   "description": "Today, we’re inviting members of the life sciences community to apply to work with us on special projects.",
+   "date": "2026-10-22T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences"
+  },
+  {
+   "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+   "link": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+   "description": "Dr. Christopher Stubbs, an experimental physicist and former Dean of Science at Harvard University, has joined Anthropic’s Long-Term Benefit Trust. He brings to the Trust decades of scientific expertise across observational cosmology and precision measurement.",
+   "date": "2026-10-21T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust"
+  },
+  {
+   "title": "Investing in the public benefit",
+   "link": "https://www.anthropic.com/news/public-benefit-fund",
+   "description": "We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows.",
+   "date": "2026-10-18T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/public-benefit-fund"
+  },
+  {
+   "title": "An update on independent evaluators",
+   "link": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+   "description": "To evaluate the safety of our systems, Anthropic is giving employee-like access to a team from METR, a nonprofit that evaluates frontier AI models, and we're in early discussions with several other organizations, including Hugging Face.",
+   "date": "2026-10-15T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/an-update-on-independent-evaluators"
+  },
+  {
+   "title": "Preparing for the 2026 US midterms",
+   "link": "https://www.anthropic.com/news/2026-us-midterms",
+   "description": "Earlier this year, we shared an update on our election safeguards. Here, we outline how we’ve continued to strengthen these safeguards ahead of this year’s US midterms.",
+   "date": "2026-10-14T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/2026-us-midterms"
+  },
+  {
+   "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+   "link": "https://www.anthropic.com/news/singapore-office-opening",
+   "description": "Anthropic has opened an office in Singapore and signed an MOU with the country’s government to advance safe, responsible AI adoption.",
+   "date": "2026-10-14T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/singapore-office-opening"
+  },
+  {
+   "title": "Strengthening our defenses against distillation attacks",
+   "link": "https://www.anthropic.com/news/distillation-defenses",
+   "description": "Illicit distillation allows model developers to copy frontier AI capabilities without creating proportionally robust safeguards. Here, we describe how we’ve reduced the rate of distillation by more than 90%.",
+   "date": "2026-10-12T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/distillation-defenses"
+  },
+  {
+   "title": "Introducing the Anthropic Cyber Mission",
+   "link": "https://www.anthropic.com/news/anthropic-cyber-mission",
+   "description": "We’re launching the Anthropic Cyber Mission, a long-term commitment to securing the systems everyone depends on.",
+   "date": "2026-10-08T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/anthropic-cyber-mission"
+  },
+  {
+   "title": "2026 Usage Policy update",
+   "link": "https://www.anthropic.com/news/2026-usage-policy-update",
+   "description": "We’re publishing a new version of our Usage Policy. In this post, we summarize the changes we’ve made.",
+   "date": "2026-10-08T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/2026-usage-policy-update"
+  },
+  {
+   "title": "Building on our commitment to American scientific discovery",
+   "link": "https://www.anthropic.com/news/genesis-mission-commitment",
+   "description": "Anthropic is committing $150 million over three years to the Genesis Mission, a federal initiative to accelerate scientific and technological discovery through AI.",
+   "date": "2026-10-08T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/genesis-mission-commitment"
+  },
+  {
+   "title": "Introducing Claude Haiku 5.5",
+   "link": "https://www.anthropic.com/claude-haiku-5-5",
+   "description": "Claude Haiku 5.5 is our fastest, most capable small model. Built for high-volume work like summarization, subagents, and browser use.",
+   "date": "2026-10-07T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/claude-haiku-5-5"
+  },
+  {
+   "title": "Expanding the Cyber Verification Program",
+   "link": "https://www.anthropic.com/news/cyber-verification-program",
+   "description": "We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
+   "date": "2026-10-06T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/cyber-verification-program"
+  },
+  {
+   "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+   "link": "https://www.anthropic.com/news/claude-frontier-academy",
+   "description": "Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk already underway.",
+   "date": "2026-10-02T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/claude-frontier-academy"
+  },
+  {
+   "title": "Barclays scales Claude to upgrade operations and improve client experience",
+   "link": "https://www.anthropic.com/news/barclays-scales-claude",
+   "description": "Barclays, the British universal bank, is expanding its strategic collaboration with Anthropic to integrate secure, enterprise-grade AI systems across its global operations.",
+   "date": "2026-10-01T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/barclays-scales-claude"
+  },
+  {
+   "title": "Introducing Claude Sonnet 5.5",
+   "link": "https://www.anthropic.com/claude-sonnet-5-5",
+   "description": "Claude Sonnet 5.5 is a clear upgrade over Claude Sonnet 5, runs 30%+ faster, and costs up to 30% less for most work.",
+   "date": "2026-09-28T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
+   "title": "Introducing Claude Opus 5.5",
+   "link": "https://www.anthropic.com/claude-opus-5-5",
+   "description": "Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+   "date": "2026-09-22T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/claude-opus-5-5"
+  },
+  {
+   "title": "The Situation Report",
+   "link": "https://www.anthropic.com/features/ebola-response",
+   "description": "A rare Ebola strain is spreading in the DRC, with no confirmed vaccine. Global health organizations are using Claude to respond as fast as possible.",
+   "date": "2026-09-21T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/features/ebola-response"
+  },
+  {
+   "title": "Partnering with Accenture on embedded evaluation",
+   "link": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+   "description": "Partnering with Accenture on embedded evaluation",
+   "date": "2026-09-18T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/accenture-embedded-evaluation"
+  },
+  {
+   "title": "Introducing the Life Sciences Verification Program",
+   "link": "https://www.anthropic.com/news/life-sciences-verification-program",
+   "description": "The Life Sciences Verification Program (LSVP) gives life science professionals access to Claude Mythos, Opus, and Sonnet models with a refined set of safeguards more permissive for biology-related work.",
+   "date": "2026-09-17T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/news/life-sciences-verification-program"
+  },
+  {
+   "title": "Introducing Claude Mythos and Fable 5.1",
+   "link": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+   "description": "They’re the world’s most advanced models for coding and knowledge work—and their research capabilities offer an early glimpse of how AI models will contribute to scientific progress.",
+   "date": "2026-09-15T00:00:00+00:00",
+   "category": "News",
+   "guid": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  }
+ ]
+}

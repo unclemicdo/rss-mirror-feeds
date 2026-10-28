@@ -2,11 +2,11 @@
 
 [![Update feeds](https://github.com/unclemicdo/rss-mirror-feeds/actions/workflows/update.yml/badge.svg)](https://github.com/unclemicdo/rss-mirror-feeds/actions/workflows/update.yml)
 
-Mirror podcast RSS feeds into this repo and serve them via jsDelivr CDN — a
-stable, free, zero-maintenance subscribe endpoint.
+Mirror or generate podcast/blog RSS feeds and serve them via jsDelivr CDN —
+a stable, free, zero-maintenance subscribe endpoint.
 
 Feeds are refreshed every 7 hours by GitHub Actions; only valid RSS/Atom XML is
-committed, and failed fetches keep the last known good file.
+committed, and failed refreshes keep the last known good file.
 
 ## Subscribe
 
@@ -14,50 +14,67 @@ committed, and failed fetches keep the last known good file.
 |---|---|
 | Dwarkesh Podcast | [feed_dwarkesh.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_dwarkesh.xml) |
 | Y Combinator Startup Podcast | [feed_yc_startup.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_yc_startup.xml) |
+| Anthropic Engineering | [feed_anthropic_engineering.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_anthropic_engineering.xml) |
+| Anthropic News | [feed_anthropic_news.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_anthropic_news.xml) |
 
-Copy the link into any podcast or RSS app. Entry GUIDs are preserved
-byte-for-byte from the source, so switching your subscription to this mirror
-does not re-mark old episodes as new.
+Copy the link into any podcast or RSS app. Entry GUIDs are preserved, so
+switching your subscription to this mirror does not re-mark old items as new.
 
 ## How it works
 
 ```mermaid
 flowchart LR
-    A["GitHub Actions<br/>every 7h + manual"] --> B["Fetch source feeds"]
-    B --> C["Validate XML:<br/>structure, non-empty,<br/>unique GUIDs, sane dates"]
-    C --> D["Atomically replace<br/>feeds/*.xml"]
-    D --> E["Commit if changed"]
-    E --> F["jsDelivr CDN serves<br/>the file globally"]
+    A["GitHub Actions<br/>every 7h + manual"] --> B{"Feed type"}
+    B -->|mirror| C["Fetch source RSS<br/>as-is"]
+    B -->|generate| D["Scrape listing page<br/>+ merge cached history"]
+    C --> E["Validate XML:<br/>structure, non-empty,<br/>unique GUIDs, sane dates"]
+    D --> E
+    E --> F["Atomically replace<br/>feeds/*.xml"]
+    F --> G["Commit if changed"]
+    G --> H["jsDelivr CDN serves<br/>the file globally"]
 ```
 
-- **Validation before publication** — a feed is only committed if it parses as
-  RSS/Atom, has at least one entry, no duplicate GUIDs, and a plausible newest
-  timestamp. Invalid output never replaces the published file.
-- **Fail-safe** — if a source is down, the last known good XML stays served.
-- **No timestamp-only commits** — unchanged feeds are not re-committed.
+Two refresh strategies, one shared pipeline:
+
+- **`mirror`** — the source already publishes RSS; bytes are mirrored as-is.
+  GUIDs and dates are inherited from the source with zero conversion.
+- **`generate`** — the site has no RSS (e.g. anthropic.com). A site-specific
+  extractor pulls entries from the page, they are merged with the checked-in
+  history in `cache/` (so old posts survive source-side truncation and URL
+  migrations), and RSS 2.0 is built from scratch.
+
+All output — mirrored or generated — passes the same validation before
+publication: parses as RSS/Atom, at least one entry, no duplicate GUIDs, no
+future-dated items. Invalid output never replaces the published file; a
+failing feed never blocks the others (and marks the CI run failed so it stays
+visible).
 
 ## Add your own feed
 
 1. Fork this repo (Actions are enabled by default).
-2. Add an entry to `SOURCES` in [`scripts/update_feeds.py`](scripts/update_feeds.py):
+2. Add an entry to `FEEDS` in [`scripts/feeds_registry.py`](scripts/feeds_registry.py):
    ```python
-   "feed_myshow.xml": "https://example.com/myshow/rss",
+   {
+       "name": "feed_myshow",
+       "type": "mirror",   # source already has RSS
+       "url": "https://example.com/myshow/rss",
+       "enabled": True,
+   },
    ```
-3. Push. The next run mirrors it, and your subscribe URL is:
+   For a site without RSS, set `"type": "generate"`, point `"generator"` at a
+   module in `scripts/generate/` (see `anthropic.py` for the pattern), and add
+   the feed's channel metadata.
+3. Push. The next run refreshes it, and your subscribe URL is:
    ```
    https://cdn.jsdelivr.net/gh/<your-user>/rss-mirror-feeds@main/feeds/feed_myshow.xml
    ```
 
-This works for any feed that already publishes RSS and is unreachable,
-unstable, or rate-limited from your reader's network. To *generate* feeds for
-sites without RSS, see [Olshansk/rss-feeds](https://github.com/Olshansk/rss-feeds).
-
 ## Notes
 
-- jsDelivr caches branch refs for up to ~12 hours; new episodes may appear
-  with that delay.
-- Audio enclosures keep pointing at the original host — this mirror only
-  mirrors the XML, not the media.
+- jsDelivr caches branch refs for up to ~12 hours; new items may appear with
+  that delay.
+- Audio enclosures keep pointing at the original host — this repo only
+  mirrors/generates the XML, not the media.
 
 ## License
 

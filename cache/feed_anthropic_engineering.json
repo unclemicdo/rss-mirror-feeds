@@ -1,0 +1,196 @@
+{
+ "entries": [
+  {
+   "title": "Redesigning source control at Anthropic",
+   "link": "https://www.anthropic.com/research/redesigning-source-control",
+   "description": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
+   "date": "2026-10-13T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/redesigning-source-control"
+  },
+  {
+   "title": "How we contain Claude across products",
+   "link": "https://www.anthropic.com/research/how-we-contain-claude",
+   "description": "As agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containment for claude.ai, Claude Code, and Cowork.",
+   "date": "2026-05-25T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/how-we-contain-claude"
+  },
+  {
+   "title": "An update on recent Claude Code quality reports",
+   "link": "https://www.anthropic.com/research/april-23-postmortem",
+   "description": "We traced recent reports of Claude Code quality issues to three separate changes. Here's what happened and what we're changing.",
+   "date": "2026-04-23T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/april-23-postmortem"
+  },
+  {
+   "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+   "link": "https://www.anthropic.com/research/managed-agents",
+   "description": "Harnesses encode assumptions that go stale as models improve. Managed Agents—our hosted service for long-horizon agent work—is built around interfaces that stay stable as harnesses change.",
+   "date": "2026-04-08T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/managed-agents"
+  },
+  {
+   "title": "How we built Claude Code auto mode: a safer way to skip permissions",
+   "link": "https://www.anthropic.com/research/claude-code-auto-mode",
+   "description": "Claude Code users approve 93% of permission prompts. We built classifiers to automate some decisions, increasing safety while reducing approval fatigue. Here's what it catches, and what it misses.",
+   "date": "2026-03-25T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/claude-code-auto-mode"
+  },
+  {
+   "title": "Harness design for long-running application development",
+   "link": "https://www.anthropic.com/research/harness-design-long-running-apps",
+   "description": "Harness design is key to performance at the frontier of agentic coding. Here's how we pushed Claude further in frontend design and long-running autonomous software engineering.",
+   "date": "2026-03-24T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/harness-design-long-running-apps"
+  },
+  {
+   "title": "Eval awareness in Claude Opus 4.6’s BrowseComp performance",
+   "link": "https://www.anthropic.com/research/eval-awareness-browsecomp",
+   "description": "Evaluating Opus 4.6 on BrowseComp, we found cases where the model recognized the test, then found and decrypted answers to it—raising questions about eval integrity in web-enabled environments.",
+   "date": "2026-03-06T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/eval-awareness-browsecomp"
+  },
+  {
+   "title": "Building a C compiler with a team of parallel Claudes",
+   "link": "https://www.anthropic.com/research/building-c-compiler",
+   "description": "Nicholas Carlini, a researcher on our Safeguards team, explains how he tasked 16 agents with writing a Rust-based C compiler, from scratch, capable of compiling the Linux kernel.",
+   "date": "2026-02-05T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/building-c-compiler"
+  },
+  {
+   "title": "Quantifying infrastructure noise in agentic coding evals",
+   "link": "https://www.anthropic.com/research/infrastructure-noise",
+   "description": "Agentic coding benchmarks are often treated as precise measurements of relative model capability. However, we’ve found that infrastructure configuration alone can produce meaningful differences in the scores.",
+   "date": "2026-02-05T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/infrastructure-noise"
+  },
+  {
+   "title": "Designing AI-resistant technical evaluations",
+   "link": "https://www.anthropic.com/research/AI-resistant-technical-evaluations",
+   "description": "What we learned from three iterations of a performance engineering take-home that Claude keeps beating.",
+   "date": "2026-01-21T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/AI-resistant-technical-evaluations"
+  },
+  {
+   "title": "Demystifying evals for AI agents",
+   "link": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+   "description": "Guidance on how to design more rigorous and useful evals for agents across a range of agent architectures and use cases in real-world deployment.",
+   "date": "2026-01-09T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
+  },
+  {
+   "title": "Effective harnesses for long-running agents",
+   "link": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+   "description": "We developed a two-fold solution to enable the Claude Agent SDK to work effectively across many context windows: an initializer agent that sets up the environment on the first run, and a coding agent that is tasked with making incremental progress in every session while leaving clear artifacts for the next session.",
+   "date": "2025-11-26T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
+  },
+  {
+   "title": "Introducing advanced tool use on the Claude Developer Platform",
+   "link": "https://www.anthropic.com/research/advanced-tool-use",
+   "description": "We’ve added three new beta features that let Claude discover, learn, and execute tools dynamically. Here’s how they work.",
+   "date": "2025-11-24T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/advanced-tool-use"
+  },
+  {
+   "title": "Code execution with MCP: Building more efficient agents",
+   "link": "https://www.anthropic.com/research/code-execution-with-mcp",
+   "description": "Code execution with MCP: Building more efficient agents",
+   "date": "2025-11-04T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/code-execution-with-mcp"
+  },
+  {
+   "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+   "link": "https://www.anthropic.com/research/claude-code-sandboxing",
+   "description": "Beyond permission prompts: making Claude Code more secure and autonomous",
+   "date": "2025-10-20T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/claude-code-sandboxing"
+  },
+  {
+   "title": "Equipping agents for the real world with Agent Skills",
+   "link": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills",
+   "description": "Claude is powerful, but real work requires procedural knowledge and organizational context. Introducing Agent Skills, a new way to build specialized agents using files and folders.",
+   "date": "2025-10-16T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills"
+  },
+  {
+   "title": "Effective context engineering for AI agents",
+   "link": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+   "description": "We explore the emerging art of context engineering and offer a refined mental model for building steerable, effective agents.",
+   "date": "2025-09-29T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
+  },
+  {
+   "title": "A postmortem of three recent issues",
+   "link": "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues",
+   "description": "A technical report on three bugs that intermittently degraded responses from Claude. Below we explain what happened, why it took time to fix, and what we're changing.",
+   "date": "2025-09-17T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues"
+  },
+  {
+   "title": "Writing effective tools for agents — with agents",
+   "link": "https://www.anthropic.com/research/writing-tools-for-agents",
+   "description": "In this post, we describe our most effective techniques for improving performance in a variety of agentic AI systems.",
+   "date": "2025-09-11T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/writing-tools-for-agents"
+  },
+  {
+   "title": "Desktop Extensions: One-click MCP server installation for Claude Desktop",
+   "link": "https://www.anthropic.com/research/desktop-extensions",
+   "description": "Today, we're introducing Desktop Extensions—a new packaging format that makes installing MCP servers as simple as clicking a button.",
+   "date": "2025-06-26T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/desktop-extensions"
+  },
+  {
+   "title": "Confidential Inference via Trusted Virtual Machines",
+   "link": "https://www.anthropic.com/research/confidential-inference-trusted-vms",
+   "description": "Confidential Inference via Trusted Virtual Machines",
+   "date": "2025-06-18T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/confidential-inference-trusted-vms"
+  },
+  {
+   "title": "How we built our multi-agent research system",
+   "link": "https://www.anthropic.com/research/multi-agent-research-system",
+   "description": "How we built our multi-agent research system",
+   "date": "2025-06-13T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/multi-agent-research-system"
+  },
+  {
+   "title": "Claude Code: Best practices for agentic coding",
+   "link": "https://www.anthropic.com/research/claude-code-best-practices",
+   "description": "Claude Code: Best practices for agentic coding",
+   "date": "2025-04-18T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/claude-code-best-practices"
+  },
+  {
+   "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+   "link": "https://www.anthropic.com/research/claude-think-tool",
+   "description": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+   "date": "2025-03-20T00:00:00+00:00",
+   "category": "Engineering",
+   "guid": "https://www.anthropic.com/research/claude-think-tool"
+  }
+ ]
+}
