@@ -4,7 +4,7 @@
 		<description><![CDATA[We help founders make something people want. The Y Combinator Podcast is where builders talk about building. From the earliest days of an idea to scaling a company that changes the world, YC partners and founders share real stories, lessons, and tactics from the frontlines.]]></description>
 		<link>http://www.ycombinator.com</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Thu, 29 Oct 2026 12:05:22 GMT</lastBuildDate>
+		<lastBuildDate>Fri, 30 Oct 2026 18:09:52 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/8c1524bc/podcast/rss" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Y Combinator]]></author>
 		<copyright><![CDATA[Y Combinator]]></copyright>
@@ -20,6 +20,22 @@
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="Technology"/>
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/23401959/23401959-1715188660604-894894aeaa81c.jpg"/>
+		<item>
+			<title><![CDATA[What Happens When Everyone Can Build Software]]></title>
+			<description><![CDATA[<p>Supabase has become one of the default backends for the AI coding era. The open source Postgres platform now has 13 million users, spins up more than a million databases every week, and roughly 70% of its new activity is coming from agents.As coding shifts from developers writing software by hand to agents building on their behalf, Supabase has been rebuilding itself around that new user.Supabase co-founder and CEO Paul Copplestone joins Garry, Harj, and Jared on the Lightcone to talk about what happens when everyone can become a builder. They dive into why personal software may become as common as personal documents, how to design products that agents actually want to use, and why knowing what to build may matter more than knowing how to build it.</p>
+]]></description>
+			<link>https://podcasters.spotify.com/pod/show/ycombinator/episodes/What-Happens-When-Everyone-Can-Build-Software-e3re66p</link>
+			<guid isPermaLink="false">a15f3227-b5b6-4ca2-886e-ee3605badca7</guid>
+			<dc:creator><![CDATA[Y Combinator]]></dc:creator>
+			<pubDate>Fri, 30 Oct 2026 18:06:16 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/8c1524bc/podcast/play/128439961/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-30%2F435443834-44100-2-4c3222fd064fb.mp3" length="46808083" type="audio/mpeg"/>
+			<itunes:summary>&lt;p&gt;Supabase has become one of the default backends for the AI coding era. The open source Postgres platform now has 13 million users, spins up more than a million databases every week, and roughly 70% of its new activity is coming from agents.As coding shifts from developers writing software by hand to agents building on their behalf, Supabase has been rebuilding itself around that new user.Supabase co-founder and CEO Paul Copplestone joins Garry, Harj, and Jared on the Lightcone to talk about what happens when everyone can become a builder. They dive into why personal software may become as common as personal documents, how to design products that agents actually want to use, and why knowing what to build may matter more than knowing how to build it.&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:48:45</itunes:duration>
+			<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/23401959/23401959-1793383529587-5ec62f2c99a0d.jpg"/>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title><![CDATA[The New Full-Stack Designer]]></title>
 			<description><![CDATA[<p>Marvin Schwaibold leads the product design studio at Shopify, where his team is rethinking some of the company’s most important products for the AI era. Before Shopify, he co-founded the design studio Molly, working with companies including Apple and Google and building a reputation for highly crafted, interactive design.In this episode of Design Review, Marvin joins YC’s Aaron Epstein to show how AI has changed his process, from using Figma as a scratchpad to building working prototypes directly with tools like Codex. He explains why designers are becoming more like editors, how AI is making them more full-stack, and why taste and judgment matter even more when the tools can build almost anything.Then they review viewer-submitted websites and break down how hierarchy, motion, typography, and restraint can make a product feel more intentional.</p>
