@@ -76,6 +76,52 @@ def validate(body: bytes) -> dict:
     return {"entries": len(items), "newest": newest.astimezone(timezone.utc)}
 
 
+def canonical_form(body: bytes) -> str | None:
+    """C14N-serialize an RSS/Atom document without volatile metadata.
+
+    How:
+    1. Parse; strip channel/feed-level build timestamps (lastBuildDate,
+       channel pubDate, Atom feed updated) that are refreshed on every fetch.
+    2. Keep everything else, including per-item dates and content.
+    3. Return None for unparseable input so callers can fall back to a rewrite.
+    """
+    try:
+        root = ET.fromstring(body)
+    except ET.ParseError:
+        return None
+    tag = local(root.tag).lower()
+    if tag == "rss":
+        channel = root.find("channel")
+        if channel is None:
+            return None
+        for child in list(channel):
+            if local(child.tag) in ("lastBuildDate", "pubDate"):
+                channel.remove(child)
+    elif tag == "feed":
+        for child in list(root):
+            if local(child.tag) == "updated":
+                root.remove(child)
+    else:
+        return None
+    return ET.canonicalize(ET.tostring(root, encoding="unicode"), strip_text=True)
+
+
+def equivalent(new: bytes, old: bytes) -> bool:
+    """True when the documents differ only in volatile build timestamps.
+
+    Used to skip rewrites and git commits when a refresh brought no real
+    change. Malformed previous bytes are never "equivalent" so a rewrite can
+    repair them.
+    """
+    if not old:
+        return False
+    can_new = canonical_form(new)
+    can_old = canonical_form(old)
+    if can_new is None or can_old is None:
+        return False
+    return can_new == can_old
+
+
 def atomic_write(target, body: bytes) -> None:
     tmp = target.with_suffix(target.suffix + ".tmp")
     tmp.write_bytes(body)

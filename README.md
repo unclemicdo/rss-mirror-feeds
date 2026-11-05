@@ -5,8 +5,11 @@
 Mirror or generate podcast/blog RSS feeds and serve them via jsDelivr CDN —
 a stable, free, zero-maintenance subscribe endpoint.
 
-Feeds are refreshed every 7 hours by GitHub Actions; only valid RSS/Atom XML is
-committed, and failed refreshes keep the last known good file.
+Feeds are refreshed every 6 hours (at :41 past the hour, clear of the
+top-of-hour cron congestion) by GitHub Actions; only valid RSS/Atom XML is
+committed, and failed refreshes keep the last known good file. A refresh that
+changed nothing but build timestamps keeps the published bytes untouched, so
+the repo only sees commits for real content changes.
 
 ## Subscribe
 
@@ -24,24 +27,31 @@ switching your subscription to this mirror does not re-mark old items as new.
 
 ```mermaid
 flowchart LR
-    A["GitHub Actions<br/>every 7h + manual"] --> B{"Feed type"}
+    A["GitHub Actions<br/>every 6h at :41 + manual"] --> B{"Feed type"}
     B -->|mirror| C["Fetch source RSS<br/>as-is"]
     B -->|generate| D["Scrape listing page<br/>+ merge cached history"]
     C --> E["Validate XML:<br/>structure, non-empty,<br/>unique GUIDs, sane dates"]
     D --> E
-    E --> F["Atomically replace<br/>feeds/*.xml"]
-    F --> G["Commit if changed"]
-    G --> H["jsDelivr CDN serves<br/>the file globally"]
+    E --> F{"Canonical compare<br/>(ignores lastBuildDate)"}
+    F -->|equivalent| G["Keep published bytes<br/>— no commit"]
+    F -->|changed| H["Atomically replace<br/>feeds/*.xml"]
+    H --> I["Commit"]
+    G & I --> J["jsDelivr CDN serves<br/>the file globally"]
 ```
 
 Two refresh strategies, one shared pipeline:
 
 - **`mirror`** — the source already publishes RSS; bytes are mirrored as-is.
-  GUIDs and dates are inherited from the source with zero conversion.
+  GUIDs and dates are inherited from the source with zero conversion. A
+  refresh is published only when the document changed beyond volatile build
+  timestamps (`lastBuildDate` / channel `pubDate` / Atom feed `updated`);
+  otherwise the published file is left untouched.
 - **`generate`** — the site has no RSS (e.g. anthropic.com). A site-specific
   extractor pulls entries from the page, they are merged with the checked-in
   history in `cache/` (so old posts survive source-side truncation and URL
-  migrations), and RSS 2.0 is built from scratch.
+  migrations), and RSS 2.0 is built from scratch. Generated output is stored
+  under the same normalized-compare rule, so a no-change rebuild produces no
+  commit despite the fresh `lastBuildDate`.
 
 All output — mirrored or generated — passes the same validation before
 publication: parses as RSS/Atom, at least one entry, no duplicate GUIDs, no

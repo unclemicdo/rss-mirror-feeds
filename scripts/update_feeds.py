@@ -42,7 +42,8 @@ def process(feed: dict) -> tuple[str, str]:
 
     target = feedlib.FEEDS_DIR / f"{name}.xml"
     old = target.read_bytes() if target.exists() else b""
-    if body == old:
+    if feedlib.equivalent(body, old):
+        # Only lastBuildDate moved — keep published bytes to avoid commit noise.
         return (name, f"✅ unchanged, {info['entries']} entries, newest {info['newest']:%Y-%m-%d}")
     feedlib.atomic_write(target, body)
     return (name, f"✅ updated, {info['entries']} entries, newest {info['newest']:%Y-%m-%d}")

@@ -10,7 +10,9 @@ def run(feed: dict) -> tuple[str, str]:
     info = feedlib.validate(body)
 
     old = target.read_bytes() if target.exists() else b""
-    if body == old:
+    if feedlib.equivalent(body, old):
+        # Same content modulo volatile build timestamps — keep published bytes
+        # so no git commit is produced for a no-change refresh.
         return name, f"✅ unchanged, {info['entries']} entries, newest {info['newest']:%Y-%m-%d}"
     feedlib.atomic_write(target, body)
     return name, f"✅ updated, {info['entries']} entries, newest {info['newest']:%Y-%m-%d}"
