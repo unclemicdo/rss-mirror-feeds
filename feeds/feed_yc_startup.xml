@@ -4,7 +4,7 @@
 		<description><![CDATA[We help founders make something people want. The Y Combinator Podcast is where builders talk about building. From the earliest days of an idea to scaling a company that changes the world, YC partners and founders share real stories, lessons, and tactics from the frontlines.]]></description>
 		<link>http://www.ycombinator.com</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Fri, 30 Oct 2026 18:09:52 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 04 Nov 2026 16:42:26 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/8c1524bc/podcast/rss" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Y Combinator]]></author>
 		<copyright><![CDATA[Y Combinator]]></copyright>
@@ -20,6 +20,22 @@
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="Technology"/>
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/23401959/23401959-1715188660604-894894aeaa81c.jpg"/>
+		<item>
+			<title><![CDATA[How To Go From Researcher to Founder]]></title>
+			<description><![CDATA[<p>Google, Anthropic, and Databricks were all started by founders with PhDs. But they’re exceptions to the rule. Many of the instincts that help researchers succeed in academia can often work against them when building a startup.YC Visiting Partner Francois Chaubard knows both worlds. He’s currently a PhD student, previously did research in Fei-Fei Li’s lab, and founded and ran Focal Systems (W16).In this episode of Startup School, Francois breaks down 10 mindset shifts researchers need to make to become formidable founders, from learning to thrive without grades or deadlines to distinguishing interesting problems from important ones, moving faster with imperfect information, and starting with what customers actually want.</p>
+]]></description>
+			<link>https://podcasters.spotify.com/pod/show/ycombinator/episodes/How-To-Go-From-Researcher-to-Founder-e3rohpu</link>
+			<guid isPermaLink="false">81a6c068-d94a-4e21-b052-5d98aff4eec8</guid>
+			<dc:creator><![CDATA[Y Combinator]]></dc:creator>
+			<pubDate>Wed, 04 Nov 2026 16:39:37 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/8c1524bc/podcast/play/128779518/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-4%2F435876461-44100-2-a6b25954a9ece.mp3" length="9456743" type="audio/mpeg"/>
+			<itunes:summary>&lt;p&gt;Google, Anthropic, and Databricks were all started by founders with PhDs. But they’re exceptions to the rule. Many of the instincts that help researchers succeed in academia can often work against them when building a startup.YC Visiting Partner Francois Chaubard knows both worlds. He’s currently a PhD student, previously did research in Fei-Fei Li’s lab, and founded and ran Focal Systems (W16).In this episode of Startup School, Francois breaks down 10 mindset shifts researchers need to make to become formidable founders, from learning to thrive without grades or deadlines to distinguishing interesting problems from important ones, moving faster with imperfect information, and starting with what customers actually want.&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:09:51</itunes:duration>
+			<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/23401959/23401959-1793810343222-02a686b37cc3.jpg"/>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title><![CDATA[What Happens When Everyone Can Build Software]]></title>
 			<description><![CDATA[<p>Supabase has become one of the default backends for the AI coding era. The open source Postgres platform now has 13 million users, spins up more than a million databases every week, and roughly 70% of its new activity is coming from agents.As coding shifts from developers writing software by hand to agents building on their behalf, Supabase has been rebuilding itself around that new user.Supabase co-founder and CEO Paul Copplestone joins Garry, Harj, and Jared on the Lightcone to talk about what happens when everyone can become a builder. They dive into why personal software may become as common as personal documents, how to design products that agents actually want to use, and why knowing what to build may matter more than knowing how to build it.</p>
