@@ -5,7 +5,15 @@
     <link>https://www.anthropic.com/engineering</link>
     <description>Latest engineering articles and insights from Anthropic's engineering team</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 01:07:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 06:34:11 +0000</lastBuildDate>
+    <item>
+      <title>The components of agent memory</title>
+      <link>https://www.anthropic.com/research/components-of-agent-memory</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/components-of-agent-memory</guid>
+      <description>For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Engineering</category>
+    </item>
     <item>
       <title>Redesigning source control at Anthropic</title>
       <link>https://www.anthropic.com/research/redesigning-source-control</link>
