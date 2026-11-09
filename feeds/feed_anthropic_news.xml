@@ -5,7 +5,15 @@
     <link>https://www.anthropic.com/news</link>
     <description>News and announcements from Anthropic</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 01:07:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 22:41:15 +0000</lastBuildDate>
+    <item>
+      <title>Introducing Claude Fable 5.2 and Claude Mythos 5.2</title>
+      <link>https://www.anthropic.com/claude-fable-and-mythos-5-2</link>
+      <guid isPermaLink="true">https://www.anthropic.com/claude-fable-and-mythos-5-2</guid>
+      <description>Our most capable models for daunting technical work, Claude Fable 5.2 and Claude Mythos 5.2 set a new bar in coding, finance, and the sciences.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <category>News</category>
+    </item>
     <item>
       <title>AI for Science expands to foundations and research institutions</title>
       <link>https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions</link>
