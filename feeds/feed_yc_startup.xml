@@ -4,7 +4,7 @@
 		<description><![CDATA[We help founders make something people want. The Y Combinator Podcast is where builders talk about building. From the earliest days of an idea to scaling a company that changes the world, YC partners and founders share real stories, lessons, and tactics from the frontlines.]]></description>
 		<link>http://www.ycombinator.com</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Sat, 07 Nov 2026 17:21:42 GMT</lastBuildDate>
+		<lastBuildDate>Sat, 14 Nov 2026 16:19:52 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/8c1524bc/podcast/rss" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Y Combinator]]></author>
 		<copyright><![CDATA[Y Combinator]]></copyright>
@@ -20,6 +20,22 @@
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="Technology"/>
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/23401959/23401959-1715188660604-894894aeaa81c.jpg"/>
+		<item>
+			<title><![CDATA[From Software Factories to Everything Factories]]></title>
+			<description><![CDATA[<p>At SpaceX Super Intelligence, Lauren Tan and Roman Ugarte are on the core team that took Grok Bot from first line of code to launch in seven weeks. </p><p><br></p><p>It lets you spin up AI teammates with their own identities and logins, and they just keep working in the background. Their marketing team gave a bot its own ad budget. Lauren built an entire feature with her bot in one Slack thread without ever opening Cursor. </p><p><br></p><p>They joined us on the Lightcone to talk about what it’s actually like working next to bots every day, and how the hard part is shifting from doing the work to figuring out what to do and why.</p>
+]]></description>
+			<link>https://podcasters.spotify.com/pod/show/ycombinator/episodes/From-Software-Factories-to-Everything-Factories-e3schq0</link>
+			<guid isPermaLink="false">3a1a846c-b45c-4357-abff-dee366d42823</guid>
+			<dc:creator><![CDATA[Y Combinator]]></dc:creator>
+			<pubDate>Sat, 14 Nov 2026 16:17:26 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/8c1524bc/podcast/play/129434880/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-14%2F436726935-44100-2-3f99863e188eb8.mp3" length="57692994" type="audio/mpeg"/>
+			<itunes:summary>&lt;p&gt;At SpaceX Super Intelligence, Lauren Tan and Roman Ugarte are on the core team that took Grok Bot from first line of code to launch in seven weeks. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;It lets you spin up AI teammates with their own identities and logins, and they just keep working in the background. Their marketing team gave a bot its own ad budget. Lauren built an entire feature with her bot in one Slack thread without ever opening Cursor. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;They joined us on the Lightcone to talk about what it’s actually like working next to bots every day, and how the hard part is shifting from doing the work to figuring out what to do and why.&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>01:00:05</itunes:duration>
+			<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/23401959/23401959-1794673030411-3752ba3683682.jpg"/>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title><![CDATA[How To Build The Future: Paul Graham & Amjad Masad]]></title>
 			<description><![CDATA[<p>Replit was building toward the AI coding era years before it had a name. In 2024, the company shipped an agent that could take a request in plain English, work through errors, provision its own infrastructure, and keep going until the software actually worked. The model companies even reached out to ask how Replit had pulled it off.Co-founder and CEO Amjad Masad had been thinking about making programming radically more accessible since 2008, and Replit’s original pitch deck predicted AI-generated code before the Transformer paper was published. Today, that same technology is moving into banks, manufacturers, and other large companies, where Amjad says teams are replacing software projects once scoped at $10 million with $250,000 of Replit.On How to Build the Future, Paul Graham sits down with Amjad to talk about why Replit was so well positioned when coding agents arrived, what comes after vibe coding, and his bigger vision for the “self-driving company,” where AI agents increasingly build and operate the software a company needs.</p>
