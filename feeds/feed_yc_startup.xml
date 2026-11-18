@@ -4,7 +4,7 @@
 		<description><![CDATA[We help founders make something people want. The Y Combinator Podcast is where builders talk about building. From the earliest days of an idea to scaling a company that changes the world, YC partners and founders share real stories, lessons, and tactics from the frontlines.]]></description>
 		<link>http://www.ycombinator.com</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Mon, 16 Nov 2026 20:37:02 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 18 Nov 2026 15:20:39 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/8c1524bc/podcast/rss" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Y Combinator]]></author>
 		<copyright><![CDATA[Y Combinator]]></copyright>
@@ -20,6 +20,22 @@
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="Technology"/>
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/23401959/23401959-1715188660604-894894aeaa81c.jpg"/>
+		<item>
+			<title><![CDATA[How To Build The Future: Eric Glyman, Co-CEO of Ramp]]></title>
+			<description><![CDATA[<p>Ramp started with a simple promise: help companies save time and money. Seven years later, it’s a $60 billion platform running the financial operations of tens of thousands of businesses, with more than $2 billion in annual revenue.Now, Ramp is using AI not just inside its products, but to rethink how the company itself works.On this episode of How to Build the Future, Ramp co-founder and CEO Eric Glyman joins Garry Tan to talk about the company’s journey from its earliest days and how AI has made some people at Ramp radically more productive. That shift led Ramp to rethink how work gets done across the organization, and Eric believes it could eventually let even large companies move with the speed of startups again.</p>
+]]></description>
+			<link>https://podcasters.spotify.com/pod/show/ycombinator/episodes/How-To-Build-The-Future-Eric-Glyman--Co-CEO-of-Ramp-e3skg4t</link>
+			<guid isPermaLink="false">6d50dd9b-a8f3-48a2-baf4-f2a7d774f165</guid>
+			<dc:creator><![CDATA[Y Combinator]]></dc:creator>
+			<pubDate>Wed, 18 Nov 2026 15:16:47 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/8c1524bc/podcast/play/129695325/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-18%2F437067230-44100-2-b93c04f63dda58.mp3" length="52137481" type="audio/mpeg"/>
+			<itunes:summary>&lt;p&gt;Ramp started with a simple promise: help companies save time and money. Seven years later, it’s a $60 billion platform running the financial operations of tens of thousands of businesses, with more than $2 billion in annual revenue.Now, Ramp is using AI not just inside its products, but to rethink how the company itself works.On this episode of How to Build the Future, Ramp co-founder and CEO Eric Glyman joins Garry Tan to talk about the company’s journey from its earliest days and how AI has made some people at Ramp radically more productive. That shift led Ramp to rethink how work gets done across the organization, and Eric believes it could eventually let even large companies move with the speed of startups again.&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:54:18</itunes:duration>
+			<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/23401959/23401959-1795014876965-82b6efeaa67ea.jpg"/>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title><![CDATA[The Rise Of AI Coworkers]]></title>
 			<description><![CDATA[<p>At SpaceXSI, Lauren Tan and Roman Ugarte are on the core team that took Grok Bot from first line of code to launch in seven weeks. </p><p><br></p><p>It lets you spin up AI teammates with their own identities and logins, and they just keep working in the background. Their marketing team gave a bot its own ad budget. Lauren built an entire feature with her bot in one Slack thread without ever opening Cursor. </p><p><br></p><p>They joined us on the Lightcone to talk about what it’s actually like working next to bots every day, and how the hard part is shifting from doing the work to figuring out what to do and why.</p>
