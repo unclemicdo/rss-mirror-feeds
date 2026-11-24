@@ -24,6 +24,12 @@ FEEDS = [
         "enabled": True,
     },
     {
+        "name": "feed_karpathy",
+        "type": "mirror",
+        "url": "https://karpathy.bearblog.dev/feed/",
+        "enabled": True,
+    },
+    {
         "name": "feed_anthropic_engineering",
         "type": "generate",
         "generator": "anthropic",

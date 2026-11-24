@@ -19,6 +19,7 @@ the repo only sees commits for real content changes.
 | Y Combinator Startup Podcast | [feed_yc_startup.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_yc_startup.xml) |
 | Anthropic Engineering | [feed_anthropic_engineering.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_anthropic_engineering.xml) |
 | Anthropic News | [feed_anthropic_news.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_anthropic_news.xml) |
+| Andrej Karpathy Blog | [feed_karpathy.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_karpathy.xml) |
 
 Copy the link into any podcast or RSS app. Entry GUIDs are preserved, so
 switching your subscription to this mirror does not re-mark old items as new.
