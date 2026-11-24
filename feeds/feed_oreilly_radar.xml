@@ -15,7 +15,7 @@
 	<atom:link href="https://www.oreilly.com/radar/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.oreilly.com/radar</link>
 	<description>Now, next, and beyond: Tracking need-to-know trends at the intersection of business and technology</description>
-	<lastBuildDate>Mon, 23 Nov 2026 20:10:15 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 24 Nov 2026 16:53:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -31,6 +31,176 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Trusting an Agent Beyond Your Expertise</title>
+		<link>https://www.oreilly.com/radar/trusting-an-agent-beyond-your-expertise/</link>
+				<comments>https://www.oreilly.com/radar/trusting-an-agent-beyond-your-expertise/#respond</comments>
+				<pubDate>Tue, 24 Nov 2026 16:53:28 +0000</pubDate>
+					<dc:creator><![CDATA[Markus Eisele]]></dc:creator>
+						<category><![CDATA[AI & ML]]></category>
+		<category><![CDATA[AI Agents]]></category>
+		<category><![CDATA[AI Governance]]></category>
+		<category><![CDATA[Commentary]]></category>
+
+		<guid isPermaLink="false">https://www.oreilly.com/radar/?p=20297</guid>
+
+		
+					<media:content 
+				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Trusting-an-agent-beyond-your-expertise-image-created-with-ChatGPT.png" 
+				medium="image" 
+				type="image/png" 
+				width="1755" 
+				height="896" 
+			/>
+
+			<media:thumbnail 
+				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Trusting-an-agent-beyond-your-expertise-image-created-with-ChatGPT-160x160.png" 
+				width="160" 
+				height="160" 
+			/>
+		
+				<custom:subtitle><![CDATA[Maintaining a Raspberry Pi made me think more about what it takes to check an agent’s changes, and how much authority I am comfortable giving it]]></custom:subtitle>
+		
+				<description><![CDATA[I have a Raspberry Pi on my home network running Pi-hole, a flight tracking setup, and a few services around them, with an external solid-state drive attached to it. When I first described the machine to my coding agent, I said there was nothing particularly complicated or compute intensive running on it, or so I [&#8230;]]]></description>
+								<content:encoded><![CDATA[
+<p class="wp-block-paragraph">I have a Raspberry Pi on my home network running Pi-hole, a flight tracking setup, and a few services around them, with an external solid-state drive attached to it. When I first described the machine to my coding agent, I said there was nothing particularly complicated or compute intensive running on it, or so I thought. Every so often, the Pi would stop responding, and a reboot was the only way I could bring it back. Eventually it became annoying enough that I really wanted to find out what had happened. The logs I needed seemed to disappear with the restart, so I had a way to recover the machine and very little idea of how to investigate the failure.</p>
+
+
+
+<p class="wp-block-paragraph">My Linux knowledge covers the things I’ve needed for server-side Java development over the years, and I can find my way around a terminal or follow familiar procedures. System-wide container configuration, service dependencies, and the details of IPv4 and IPv6 take me well beyond that experience. I knew enough to recognize that changing some of those settings could cut off my access and leave me running up the stairs to wire my computer up to the Pi. My dad also depends on this machine for his flight radar app and enjoys watching planes go by, so I had to consider how a change would affect him too.</p>
+
+
+
+<p class="wp-block-paragraph">Before I could consider changing any of those settings, I needed help deciding where to look. Somebody had to turn “The Pi has stopped responding” into questions I could investigate, and I decided that asking the agent was a reasonable way to do that.</p>
+
+
+
+<p class="wp-block-paragraph">It went a little too well, to be honest. The agent configured persistent logging and regular health samples so there would be information to examine after a restart. We moved to Ethernet and disabled Wi-Fi, and it checked the services, storage, and connection to the router. It later repaired forwarding for local name queries and identified a problem in the order in which the Pi-hole container stopped and its external drive was unmounted.</p>
+
+
+
+<p class="wp-block-paragraph">The container needed the drive to stay mounted until the service had stopped, so the agent added an explicit dependency on the drive’s mount to put those events in the right order. After I later installed updates and rebooted, I asked it to check again, and it found log entries showing the service stopping, followed by a successful unmount of the drive.</p>
+
+
+
+<p class="wp-block-paragraph">I could follow those steps once the agent explained them to me: finding the missing dependency, expressing it in the service configuration, and choosing the log entries to examine all required knowledge I was getting from the agent. I trusted its assessment of that reboot, relying on it to judge changes it had made with the root access I had given it over SSH. That felt very weird and gave me reason to think more carefully about the advice to “trust, but verify.”</p>
+
+
+
+<h2 class="wp-block-heading">Checking a repair I needed help to make</h2>
+
+
+
+<p class="wp-block-paragraph">The agent also suggested the configuration backups and checks after changes, so I relied on it for the precautions as well as the repair. Judging whether I could recover from a failed change required some of the same Linux knowledge I just didn’t have.</p>
+
+
+
+<p class="wp-block-paragraph">In “<a href="https://www.oreilly.com/radar/code-review-after-code-gets-cheap/" target="_blank" rel="noopener">Code Review After Code Gets Cheap</a>,” I described starting with intended behavior, evidence, and the effects of a change elsewhere in the system. <a href="https://www.oreilly.com/radar/the-right-amount-of-spec-for-agentic-development/" target="_blank" rel="noopener">Adjusting enough of the specification to make correctness checkable</a> also depends on knowing what to expect. With my Pi challenges, I needed help establishing those expectations while deciding whether to accept the change, which left me wondering how likely this approach was to succeed and how much trust was justified.</p>
+
+
+
+<p class="wp-block-paragraph">I had given my agent the ability to act on the assessment I was asking it to make. With root access over SSH, it could change the operating system and services, including settings that determined whether I could reach the machine again. My willingness to let it proceed depended partly on what I thought a mistake would cost me. This was my Pi on my home network, with no services exposed directly to the internet, and I was prepared to spend time repairing it if necessary. I expected that to mean writing a fresh image onto an SD card and configuring the handful of things I had done a couple of times before.</p>
+
+
+
+<p class="wp-block-paragraph">The flight radar was the closest thing to a production dependency, and interrupting it would mean a couple of disappointed messages from my dad almost immediately. A Pi-hole change could also interrupt name resolution for devices on my home network. With upstream fallbacks configured in the router, this would probably mean my kids complaining about too many ads in their favorite apps. Thinking through those dependencies was part of deciding how much disruption I was prepared to accept, and another reason to ask for help understanding the machine.</p>
+
+
+
+<h2 class="wp-block-heading">Deciding how much to hand over</h2>
+
+
+
+<p class="wp-block-paragraph">The quadrant below brings together the two things I was trying to judge: how much I understood about the task and what a mistake could affect. Across the horizontal axis is my knowledge of a particular task: how well I can explain the expected behavior, recognize a plausible failure, and assess a check. Up the vertical axis are the consequences of a mistake, including who would be affected and what recovery would involve. I place the Pi toward the lower-left, based on what I understand about it and the disruption I am prepared to accept.</p>
+
+
+<div class="wp-block-image">
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b05c12d4b03c&quot;}" data-wp-interactive="core/image" data-wp-key="6b05c12d4b03c" class="aligncenter size-large wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1600" height="1493" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1600x1493.png" alt="Illustrative positions for particular tasks. The Pi’s position reflects my assessment of the consequences. New dependencies or better understanding can change that assessment." class="wp-image-20298" style="aspect-ratio:1.0707456978967496" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1600x1493.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-300x280.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-767x716.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1536x1433.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11.png 2048w" sizes="(max-width: 1600px) 100vw, 1600px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption"><em>Figure 1. Illustrative positions for particular tasks. The Pi’s position reflects my assessment of the consequences. New dependencies or better understanding can change that assessment.</em></figcaption></figure>
+</div>
+
+
+<p class="wp-block-paragraph">For the Pi, that suggests keeping each change small enough to follow and making sure I can recover before the next one. A developer learning an unfamiliar library in an isolated project with disposable data would be in the same quadrant, with room to try changes whose effects they can contain.</p>
+
+
+
+<p class="wp-block-paragraph">Moving to the right, imagine a local Java utility with familiar inputs and expected outputs. I can give the agent more freedom over the implementation because I know how to assess the result and expect a mistake to have limited effects. My attention can go to whether it does what I asked and what else it changed.</p>
+
+
+
+<p class="wp-block-paragraph">Moving upward changes what I need from the people and systems around me. A developer attempting their first migration of customer data needs somebody who understands the data and its recovery process to review the assumptions with them. The agent can help prepare the migration against a copy, with access controls keeping it away from the live database, while the developer discusses the changes with that experienced colleague.</p>
+
+
+
+<p class="wp-block-paragraph">An experienced maintainer changing customer-access rules would be toward the upper right. Knowing the service helps them anticipate failures and choose representative tests. The consequences for customers also call for review by another person and control over how the change reaches them.</p>
+
+
+
+<p class="wp-block-paragraph">I can be on the right for a familiar Java task and on the left for the Pi’s service configuration. When choosing somebody to review a change, consider their experience with that system and the task, including where they need help.</p>
+
+
+
+<h2 class="wp-block-heading">Learning enough for the next change</h2>
+
+
+
+<p class="wp-block-paragraph">Letting my agent operate as root on a Linux machine gave me another small “It can do that too?” moment, along with the discomfort of doing something I ask developers to avoid. I felt I had missed an opportunity to learn, which bothered me because I’ve always loved learning. I had let the agent do its thing and watched the results, so for further changes to my environment I want to use more of my own understanding and judgment.</p>
+
+
+
+<p class="wp-block-paragraph">In <a href="https://arxiv.org/abs/2601.20245" target="_blank" rel="noopener">a randomized experiment with 52 developers</a> learning the unfamiliar Python library Trio, half were given access to an AI assistant during the coding task. On a quiz taken immediately afterwards without AI, that group scored about four points lower, on average, on a 27-point scale. The result gives me another reason to think about how much I learn while an agent helps me complete an unfamiliar task.</p>
+
+
+
+<p class="wp-block-paragraph">For my next Pi change, I could break the problem down before asking for help, starting with the shutdown sequence. I could describe which events I expect to see and why, before asking the agent for an interpretation. Discussing that prediction with the agent or somebody familiar with the service manager would help me find the parts I need to understand better. I could then follow those parts through the configuration and the result, giving myself something to bring to the next investigation.</p>
+
+
+
+<p class="wp-block-paragraph">Taking those steps would require more effort than asking an agent to “fix things”; and the reward would be a better understanding of the system and, over time, more ability to judge the agent’s decisions and predictions. A team can make room for the same practice by giving a developer a small change, time to understand it, and a colleague to discuss it with. Existing acceptance tests can provide expectations the team has already agreed on, and the colleague can explain what they cover and identify a failure worth investigating. That support needs to be part of asking somebody to review the agent’s changes.</p>
+
+
+
+<h2 class="wp-block-heading">Trusting the next change</h2>
+
+
+
+<p class="wp-block-paragraph">I will probably ask for the same help next time, given that all the changes on my Pi had the intended result. The flight radar kept running, and my dad sent me no text messages complaining about it. That success could make me more comfortable letting the agent take over again, so making time to understand the next change will need to be part of that decision.</p>
+
+
+
+<p class="wp-block-paragraph">If more services and people came to depend on the machine while my understanding changed little, I could find myself allowing more consequential decisions on the strength of repairs I had only partly understood. I would need to consider whether that experience justified giving the agent the same freedom.</p>
+
+
+
+<p class="wp-block-paragraph">If agents become better at planning, making changes, and checking the results, they may carry out more of an investigation before involving us. We could spend years accepting those results while getting less practice investigating systems ourselves. An outage would announce that something had gone wrong; recognizing a more subtle error could require knowledge we have stopped using or never developed. I can imagine needing the agent to tell me that its own solution is wrong.</p>
+
+
+
+<p class="wp-block-paragraph">More capable agents may also prevent and detect failures I would miss today, and relying on their checks could be reasonable. I would then need to consider how a mistake in the checking itself could be discovered, who could question the assessment, and what they would need to understand.</p>
+
+
+
+<p class="wp-block-paragraph">So the amount of trust I can justify depends on the particular task, the evidence available, and the cost of being wrong. A history of successful repairs can support confidence in similar changes. Before giving an agent more freedom on a system with a larger blast radius, build enough understanding to assess the change, bring in somebody who can, or limit what the agent is allowed to affect.</p>
+
+
+
+<p class="wp-block-paragraph">For me, trusting an agent includes the uncertainty I accept on behalf of the people using the system. I want that trust to grow alongside my ability to question its decisions, so as I hand over more of the technical judgment, I need to choose what I make time to learn. That understanding shapes how much authority I am prepared to give it and how I take responsibility for the result.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://www.oreilly.com/radar/trusting-an-agent-beyond-your-expertise/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
 		<title>When One Task Becomes Another</title>
 		<link>https://www.oreilly.com/radar/when-one-task-becomes-another/</link>
 				<comments>https://www.oreilly.com/radar/when-one-task-becomes-another/#respond</comments>
@@ -867,7 +1037,7 @@ print(t.tokenize(' strawberry'), t.tokenize('strawberry'))"</code></pre>
 
 
 <div class="wp-block-image">
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6b049dc68e025&quot;}" data-wp-interactive="core/image" data-wp-key="6b049dc68e025" class="aligncenter size-large wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1600" height="1248" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png" alt="Be the watermark" class="wp-image-20261" style="aspect-ratio:1.2813141683778233" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-300x234.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-768x599.png 768w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1536x1198.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10.png 1800w" sizes="(max-width: 1600px) 100vw, 1600px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b05c12d5ae21&quot;}" data-wp-interactive="core/image" data-wp-key="6b05c12d5ae21" class="aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1600" height="1248" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png" alt="Be the watermark" class="wp-image-20261" style="aspect-ratio:1.2813141683778233" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-300x234.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-768x599.png 768w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1536x1198.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10.png 1800w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -2708,228 +2878,15 @@ print(t.tokenize(' strawberry'), t.tokenize('strawberry'))"</code></pre>
 							<wfw:commentRss>https://www.oreilly.com/radar/why-git-needs-help-moving-from-files-to-systems-for-source-control/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 							</item>
-		<item>
-		<title>Where Are the “Killer Apps” of AI?</title>
-		<link>https://www.oreilly.com/radar/where-are-the-killer-apps-of-ai/</link>
-				<comments>https://www.oreilly.com/radar/where-are-the-killer-apps-of-ai/#respond</comments>
-				<pubDate>Wed, 11 Nov 2026 15:43:41 +0000</pubDate>
-					<dc:creator><![CDATA[Tim O’Reilly]]></dc:creator>
-						<category><![CDATA[Artificial Intelligence (AI)]]></category>
-		<category><![CDATA[Digital Economy]]></category>
-		<category><![CDATA[Innovation]]></category>
-		<category><![CDATA[Commentary]]></category>
-
-		<guid isPermaLink="false">https://www.oreilly.com/radar/?p=20197</guid>
-
-		
-					<media:content 
-				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Where-are-the-killer-apps-of-AI-image-created-with-Gemini-scaled.jpeg" 
-				medium="image" 
-				type="image/jpeg" 
-				width="2560" 
-				height="1429" 
-			/>
-
-			<media:thumbnail 
-				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Where-are-the-killer-apps-of-AI-image-created-with-Gemini-160x160.jpeg" 
-				width="160" 
-				height="160" 
-			/>
-		
-		
-				<description><![CDATA[Most of today’s AI entrepreneurs and social media enthusiasts are young. AI is the first technology revolution they’ve lived through. They don’t remember how unbelievably exciting it was in the late 1970s to get your own computer, instead of struggling to get time on one of the vast machines chugging away in what used to [&#8230;]]]></description>
-								<content:encoded><![CDATA[
-<p class="wp-block-paragraph">Most of today’s AI entrepreneurs and social media enthusiasts are young. AI is the first technology revolution they’ve lived through. They don’t remember how unbelievably exciting it was in the late 1970s to get your own computer, instead of struggling to get time on one of the vast machines chugging away in what used to be called “the glass house,” an air-conditioned room where from outside you could watch the nine-track tapes being accessed and the refrigerator-sized disk drives spinning. Input and output was on high-speed teletype printers (no screens) and magnetic tape (and before that on punch cards.) They also mostly don’t remember, as I do, writing assembly-language programs in which you moved data from one computer register to another, specified the arithmetic or logical operations to be performed on it, and then specified where to save the result.</p>
-
-
-
-<p class="wp-block-paragraph">They look at today’s AI and marvel at how virtually anyone can now generate code. They don’t realize that that’s also how it felt when you could use an interpreted programming language like BASIC to write your own applications instead of writing them in Assembler. They also don’t remember when Dan Bricklin used BASIC to write the first version of VisiCalc in 1979. He went into business with Bob Frankston, who rewrote it in 6502 Assembly Language for the Apple II. Dan was able to express the idea in Basic; Bob then wrote a tight, efficient version for widespread distribution. People rushed out to buy computers so they could use VisiCalc, and everyone predicted that the VisiCalc “spreadsheet” would put all the accountants out of work. It was the first program to be referred to as a “killer app.” It wasn’t the democratization of programming itself that was the killer app but what Dan and Bob did with it. In the entrepreneurial explosion that followed, databases, graphics, word processing, and other business applications came out of the glass house and, as Bill Gates put it, “onto every desk and into every home.”</p>
-
-
-
-<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1600" height="1199" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-7-1600x1199.png" alt="Dan Bricklin (right) with Bob Frankston, who rewrote VisiCalc in 6502 Assembly Language for the Apple II
-Image from https://www.digitec.ch/en/page/visicalc-the-first-killer-app-in-computer-history-16230
-" class="wp-image-20198" style="aspect-ratio:1.3341094295692666;width:1146px;height:auto" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-7-1600x1199.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-7-300x225.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-7-767x575.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-7-1536x1151.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-7.png 2048w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><figcaption class="wp-element-caption">Dan Bricklin (right) with Bob Frankston, who rewrote VisiCalc in 6502 Assembly Language for the Apple II<br>Image from <a href="https://www.digitec.ch/en/page/visicalc-the-first-killer-app-in-computer-history-16230">https://www.digitec.ch/en/page/visicalc-the-first-killer-app-in-computer-history-16230</a><br></figcaption></figure>
-
-
-
-<p class="wp-block-paragraph">We saw the same leap from astonishment to innovation to adoption with the World Wide Web. When O’Reilly demonstrated <a href="https://en.wikipedia.org/wiki/Global_Network_Navigator" target="_blank" rel="noopener">GNN</a>, the first commercial website, to people at a trade show in 1993, attendees couldn’t believe that clicking on a link could pop up an image or a document from another computer thousands of miles away. They didn’t understand the difference between the software application (the web browser) from the network-connected documents with clickable hyperlinks that it acted as a frame for. They didn’t understand that <a href="https://dl.acm.org/doi/10.1145/253671.253687" target="_blank" rel="noopener">web pages were a new kind of software</a> written in a simple markup language anyone could understand. It didn’t make sense that the web page was a document that in many ways could look and act like a kind of program. And when people did understand, they thought that might be the end of programming.</p>
-
-
-
-<p class="wp-block-paragraph">In 1993, everyone thought that the web browser itself was the killer app, and that Marc Andreessen, the young creator of Mosaic, the most popular web browser, which became Netscape, was going to dethrone Bill Gates as the new king of computing. They didn’t realize that the true killer apps of the web were not the web browser and the web server but applications “up the stack” built using the new programming paradigm the web enabled. Those applications weren’t software as we’d known software before. They were database- and application-backed websites delivering services that were previously impossible. I remember thinking of Amazon as the 2005 equivalent to VisiCalc when a friend told me she had just bought her first computer so she could shop on Amazon. Once again, it wasn’t the new capability itself that was the killer app but what developers did with it.</p>
-
-
-
-<p class="wp-block-paragraph">What makes a killer app? I think that Tom Stoppard nailed it in his play <em>Rosencrantz and Guildenstern Are Dead</em>:</p>
-
-
-
-<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">A man breaking his journey between one place and another at a third place of no name, character, population or significance, sees a unicorn cross his path and disappear. That in itself is startling, but there are precedents for mystical encounters of various kinds, or to be less extreme, a choice of persuasions to put it down to fancy; until—“My God,” says a second man, “I must be dreaming, I thought I saw a unicorn.” At which point, a dimension is added that makes the experience as alarming as it will ever be. A third witness, you understand, adds no further dimension but only spreads it thinner, and a fourth thinner still, and the more witnesses there are the thinner it gets and the more reasonable it becomes until it is as thin as reality, the name we give to the common experience.</p>
-</blockquote>
-
-
-
-<p class="wp-block-paragraph">That is, a killer app is at first a startling window onto an undreamed-of possibility, but one that so changes the paradigm that it rapidly gets taken for granted. In the meantime, everyone tries to make sense of the new world. Usually, their sensemaking is to try to reduce it to what they already know. The breakthrough entrepreneurs see more deeply and go farther.</p>
-
-
-
-<p class="wp-block-paragraph">In 1995 and 1996, almost everyone saw the future as a showdown between Microsoft and Netscape over who would own the web server and the web browser, and whether the web would supplant the desktop as the new platform. Microsoft won the browser wars, but it turned out to matter far less than anyone expected. The value went to the companies building on top of the browser, the ones that figured out what the network made possible.</p>
-
-
-
-<p class="wp-block-paragraph">The current narrative pitting AI model providers against each other sounds a lot like Microsoft versus Netscape to me. It is the platform war, the war for the layer that will become the common experience on which the revolutionary future will be built. ChatGPT, Claude, and Gemini are the browsers of this era. That is not a small thing. But the browser wasn’t actually the killer app of the web. Netscape made money for a little while. Amazon and Google and the explosion of other sites were what made the web into something people couldn’t live without.</p>
-
-
-
-<p class="wp-block-paragraph">Claude Code, Codex, Cursor, and the other coding agents may be the BASIC of this era, or like the tools and frameworks that made database-backed web applications possible. They are plumbing. Important plumbing, and plumbing that has to be in place before the future can truly happen. But still just plumbing. Inventors tend to spend decades maturing it, and O’Reilly tends to spend decades teaching people to build it. I suspect that will be just as true this time around.</p>
-
-
-
-<p class="wp-block-paragraph">In short, I’ve started asking myself whether we’ve actually seen the killer app for AI yet. The obvious assumption is that ChatGPT was. It certainly got a LOT of people excited and onboard very, very quickly. But maybe Claude Code was, enabling the breakthrough in agentic coding. Or maybe Hermes or Dots or Muse or some other personal agent will be. But we should take seriously the possibility that the killer app is not yet on the scene. These initial candidates for the killer app look too much like advances in a new enabling platform and not enough like a new generation of applications.</p>
-
-
-
-<p class="wp-block-paragraph">Personal agents may turn out to be a breakthrough category, but right now they look to me like early ecommerce before Amazon got it right.<sup data-fn="abd7edcd-143d-429d-aca3-df39bc2ddf61" class="fn"><a href="#abd7edcd-143d-429d-aca3-df39bc2ddf61" id="abd7edcd-143d-429d-aca3-df39bc2ddf61-link">1</a></sup> For Amazon to work, the web had to become secure enough for people to use credit cards online. The apps were waiting on missing mechanisms. For Google’s economic model to kick into gear, pay-per-click advertising had to be invented. I suspect we are in a similar moment waiting for crucial pieces to be dumped on the table so developers can complete their part of the puzzle. For AI agents to act on our behalf in the world, they will need their own equivalents: ways to pay, to prove who they are acting for, to be held accountable, and for the counterparties to settle on the allocation of the value created by the transaction. Ilan Strauss and I have argued in “<a href="https://www.oreilly.com/radar/the-missing-mechanisms-of-the-agentic-economy/" target="_blank" rel="noopener">The Missing Mechanisms of the Agentic Economy</a>” that many of those mechanisms don’t exist yet. Maybe the killer apps are waiting on the equivalent of https and pay per click.</p>
-
-
-
-<p class="wp-block-paragraph"><em>In short, when you listen to the AI conversation and mostly hear about people’s programming pipelines and how much more productive their programmers are, and very little about what they are using that productivity to build, you can be pretty confident that the killer apps haven’t arrived yet.</em></p>
-
-
-
-<h2 class="wp-block-heading">Where are we in the cycle?</h2>
-
-
-
-<p class="wp-block-paragraph">Let’s line up the calendars and see if that tells us something useful.</p>
-
-
-
-<p class="wp-block-paragraph">CP/M (Control Program for Microcomputers), the first widespread personal computer operating system, was developed in 1974, and the Altair 8800, the first mass-market personal computer, appeared on the cover of <em>Popular Electronics</em> in January 1975. Microsoft released a BASIC interpreter for it in June of that same year. A host of competing personal computer hardware platforms running CP/M were introduced soon thereafter. The Apple II was released in 1977, VisiCalc in October 1979, and dBase II in 1980. The IBM PC came out in August 1981 with Microsoft’s MS-DOS as its operating system. Lotus 1-2-3 (which included spreadsheet, graphing, and simple database features) was released in January 1983 and turned the PC into a business necessity. </p>
-
-
-
-<p class="wp-block-paragraph">In 1984, the revolutionary graphical user interface of the Macintosh was the next step function jump in the PC era. The GUI itself had been invented at Xerox PARC in the 1970s, but it wasn’t till Steve Jobs built his “insanely great” Mac that the world embraced it. Desktop publishing became the killer app of the GUI, with Aldus PageMaker and the Apple LaserWriter in 1985. The PC proper didn’t get the GUI till Windows 3.0 in 1990, but Microsoft’s embrace of it for applications such as Word (1983), Excel (1985), and PowerPoint (1987) as well as for the operating system and programming environment made it, for the time, master of the computing world.</p>
-
-
-
-<p class="wp-block-paragraph">So you can see a rough timeline. Four or five years from the introduction of the first version of what was to become the new platform to the first killer app. (Or two, if you count from the introduction of the Apple II, the platform for which VisiCalc was first written.) Then 10 years of invention, competition, and refinement, followed by fairly rapid consolidation and accumulation of market power.</p>
-
-
-
-<p class="wp-block-paragraph">Let’s do the same timeline for the web. Email and online forums might well have been the first internet killer apps, but they were really holdovers from previous generations of research networks. They were apps that had been evolving since the 1970s, though CompuServe and AOL had begun to bring them to the general public in the ’80s. The world really changed, though, when Tim Berners-Lee first wrote his proposal for what became the World Wide Web in March 1989. It was released to the world in August 1991. This was the new platform and the start of what would become the new programming paradigm.</p>
-
-
-
-<p class="wp-block-paragraph">Not too much happened outside physics labs and a few universities until 1993. (There were only about 200 websites when we published <em><a href="https://en.wikipedia.org/wiki/Whole_Internet_User%27s_Guide_and_Catalog" target="_blank" rel="noopener">The Whole Internet User’s Guide and Catalog</a></em> in November 1992.) In 1993, NCSA, the National Center for Supercomputer Applications, released <a href="https://en.wikipedia.org/wiki/NCSA_Mosaic" target="_blank" rel="noopener">Mosaic</a> and we launched <a href="https://en.wikipedia.org/wiki/Global_Network_Navigator" target="_blank" rel="noopener">GNN</a>, the first commercial website. Netscape shipped its browser, a follow-on to Mosaic, at the end of 1994. Yahoo! was launched that year too, Amazon, eBay, and the Altavista search engine in 1995, MapQuest in 1996, Google in 1998, and Wikipedia in 2001.</p>
-
-
-
-<p class="wp-block-paragraph">So, again about four years from the release of the platform to the appearance of the first killer app, and another 10 till the consolidation phase. (I see Gmail 2004, Google Maps 2005, Google Docs 2006, and Chrome 2008 as the equivalent of Microsoft’s release of Office on top of Windows as the beginning of the consolidation phase of the web.)</p>
-
-
-
-<p class="wp-block-paragraph">The timeline for mobile is not dissimilar. The iPhone in 2007, Android in 2008. Killer social apps Facebook and Twitter had gotten their start on the web at about the same time, but really came into their own on mobile over the next few years. The “could only have happened on mobile” killer apps of Uber, Lyft, and the on-demand economy didn’t arrive till 2011/2012.</p>
-
-
-
-<p class="wp-block-paragraph">A lot of people seem to think AI is moving way faster than previous technology revolutions. But if you line up the calendars, AI is moving at about the same pace as previous eras. Treat the transformer paper, “<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a>,” published in June 2017, as the AI equivalent of Tim Berners-Lee’s 1989 proposal, and ChatGPT’s first release on November 30, 2022, as the equivalent of Mosaic. The gap from invention to breakout is about the same, five years for the web and five and a half for AI. That’s just getting the platform in place. The AI-native “killer apps” haven’t yet arrived but are due soon. (And please, let’s avoid the jokes that the “killer apps” of AI first showed up in the Russia-Ukraine drone war. That’s true, but not on the direct line of my argument here.)</p>
-
-
-
-<p class="wp-block-paragraph">On what seems to be a fairly consistent timeline, where are we today, then? October 2026 corresponds to roughly the spring of 1997. Amazon was about to go public. Hotmail was a year old. Google was still a research project at Stanford called BackRub. SixDegrees had kicked off social networking, but Facebook was still seven years off. Napster was still two years away.</p>
-
-
-<div class="wp-block-image">
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6b049dc6b247d&quot;}" data-wp-interactive="core/image" data-wp-key="6b049dc6b247d" class="aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1600" height="1316" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-8-1600x1316.png" alt="Line up the calendars" class="wp-image-20199" style="aspect-ratio:1.21656050955414" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-8-1600x1316.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-8-300x247.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-8-767x631.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-8-1536x1263.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-8.png 2048w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.thisImage.buttonRight"
-			data-wp-style--top="state.thisImage.buttonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button></figure>
-</div>
-
-
-<p class="wp-block-paragraph">Think of all those amazing application categories that had been pioneered, though. Search, ecommerce, email, and social networking were all in their infancy, but they were out there, delivering real value. I’m not sure that I see the equivalent time to value in AI. AI didn’t even get to Claude Code, its Microsoft Basic equivalent, till 2025! By some measures, AI is moving more slowly rather than more quickly. There’s more change to digest, and developers are still struggling with the tooling and developing the new knowledge that is needed.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Why so slow, with so much money?</strong></h2>
-
-
-
-<p class="wp-block-paragraph">The four largest hyperscalers are on track to spend <a href="https://om.co/2026/04/30/what-i-learned-about-hyperscalers-ai-spend/" target="_blank" rel="noopener">roughly $700 billion</a> in capital expenditure this year, nearly double what they spent in 2025. That is orders of magnitude more capital than went into the web in the 1990s. If capital and capability were the limiting factors, you’d think we should be well ahead of the earlier calendar, not behind.</p>
-
-
-
-<p class="wp-block-paragraph">I suspect that at least part of the answer is that <a href="https://web.archive.org/web/20190205184624/https://qz.com/1540608/the-problem-with-silicon-valleys-obsession-with-blitzscaling-growth/" target="_blank" rel="noopener">Silicon Valley’s quest for premature monopoly</a> may be making it less efficient at finding breakthroughs rather than more. Starting with the era of Uber and Lyft, massive VCs have canonized the winners at the beginning of the race, crowding out alternate technologies and business models. That may be happening here. But it’s also just in the nature of bubbles, which depend on groupthink to flourish.</p>
-
-
-
-<p class="wp-block-paragraph">And part of that groupthink is about where the value is going to be captured, rather than where it is going to be created. That is almost always backward looking. During the railroad boom, capital was pouring into building the tracks, and the new business models (think Montgomery Ward and Sears) that railroad enabled didn’t come till later. The dot-com bubble was far less capital intensive than people think. The telecom buildout that ran alongside it was where the money got spent. US carriers spent about $97 billion on capital in 2000 alone.</p>
-
-
-
-<p class="wp-block-paragraph">By 2002, according to an <a href="https://www.fdic.gov/bank/analytical/bank-trends/bt0205.pdf" target="_blank" rel="noopener">FDIC analysis</a>, only 2% to 5% of the fiber in the ground was actually lit. More than 60 telecom companies went bankrupt. Once the data centers and dark fiber of the telecom bubble could be bought for pennies on the dollar, they enabled a generation of new applications like streaming video. YouTube was founded in 2005, after the crash, on cheap bandwidth that someone else had paid for before they went out of business. There were some visionary companies (think Google, Amazon) that had been started before the abundance arrived, but many more were founded after the bubble burst.</p>
-
-
-
-<p class="wp-block-paragraph">Carlota Perez’s book <em><a href="https://en.wikipedia.org/wiki/Technological_Revolutions_and_Financial_Capital" target="_blank" rel="noopener">Technological Revolutions and Financial Capital</a></em> documented this pattern across every technological revolution since the canal era. Financial capital pours into the installation of the new infrastructure, a bubble forms and bursts, and the deployment period that follows, when the technology actually reshapes the economy, is built by different people on top of what the crash left behind. If that is where we are in the cycle, then the absence of killer apps is not a puzzle at all.</p>
-
-
-
-<p class="wp-block-paragraph">The current data center buildout and the massive investments in frontier AI may not be the future. They are the infrastructure on which the future will be built. We have to ask ourselves what will we build once competition and overshoot and the bursting of the data center bubble make intelligence infrastructure cheap.</p>
-
-
-
-<h2 class="wp-block-heading"><strong>Help me fill in the picture</strong></h2>
-
-
-
-<p class="wp-block-paragraph">I see several possibilities. Either we are still early and the killer apps simply haven’t shown up yet, the way Google hadn’t shown up in 1997. Or AI is going more slowly than its boosters claim, in spite of all the capital, because capital and model capability are not the limiting factors. But it’s also possible that the killer apps are here, and I’m not hearing about them because the AI conversation is so focused on AI capability and nobody is telling the story of what they are accomplishing with it beyond building better developer tools.</p>
-
-
-
-<p class="wp-block-paragraph">I would like to know which. We all recognize a killer app when we see one. Amazon was a bookstore with more books than any physical bookstore could hold. Wikipedia was an encyclopedia written entirely by volunteers and was updated in real time within hours and sometimes even minutes of major events. Google Maps meant you always knew where you were and how to get anywhere else. If you know of an AI <em>application</em>, beyond the chatbot or agentic coding environment itself, that changes what ordinary people can do on that scale, or a business that does something an order of magnitude cheaper or better than the one it replaces, I want to hear about it. <a href="https://docs.google.com/forms/d/e/1FAIpQLScVrmLppwzN5EDI-r_TjZVT7mb3007IlBecx61DG4DZsfYJ4A/viewform" target="_blank" rel="noopener">Tell me what you’re building</a> in the Google Form below, and describe what tools you’re using only in the context of what they let you produce for others. If you’re a software developer using AI, what are you producing that was unthinkable before AI?</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-5249bbc0 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://docs.google.com/forms/d/e/1FAIpQLScVrmLppwzN5EDI-r_TjZVT7mb3007IlBecx61DG4DZsfYJ4A/viewform" target="_blank" rel="noopener"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-green-cyan-color">Tell me what you’re building</mark></a></div>
-</div>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h3 class="wp-block-heading">Footnote</h3>
-
-
-<ol class="wp-block-footnotes"><li id="abd7edcd-143d-429d-aca3-df39bc2ddf61">CommerceNet demonstrated <a href="https://www.nytimes.com/1994/08/12/business/attention-shoppers-internet-is-open.html" target="_blank" rel="noopener">the first encrypted credit card transaction online</a> in 1994, and Netscape made the idea mainstream when it introduced HTTPS (HyperText Transfer Protocol Secure) and made it available in the Netscape browser in that same year. This made it safe to type a credit card number onto a web page. <a href="#abd7edcd-143d-429d-aca3-df39bc2ddf61-link" aria-label="Jump to footnote reference 1"><img src="https://s.w.org/images/core/emoji/17.0.2/72x72/21a9.png" alt="↩" class="wp-smiley" style="height: 1em; max-height: 1em;" />︎</a></li></ol>]]></content:encoded>
-							<wfw:commentRss>https://www.oreilly.com/radar/where-are-the-killer-apps-of-ai/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-							</item>
 	</channel>
 </rss>
 
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
 
-Object Caching 86/86 objects using Memcached
+Object Caching 87/88 objects using Memcached
 Page Caching using Disk: Enhanced (Page is feed) 
 Minified using Memcached
 
-Served from: www.oreilly.com @ 2026-11-23 20:10:46 by W3 Total Cache
+Served from: www.oreilly.com @ 2026-11-24 16:54:05 by W3 Total Cache
 -->

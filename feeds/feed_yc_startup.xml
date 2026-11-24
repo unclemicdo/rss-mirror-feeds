@@ -4,7 +4,7 @@
 		<description><![CDATA[We help founders make something people want. The Y Combinator Podcast is where builders talk about building. From the earliest days of an idea to scaling a company that changes the world, YC partners and founders share real stories, lessons, and tactics from the frontlines.]]></description>
 		<link>http://www.ycombinator.com</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Wed, 18 Nov 2026 15:20:39 GMT</lastBuildDate>
+		<lastBuildDate>Tue, 24 Nov 2026 19:59:40 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/8c1524bc/podcast/rss" rel="self" type="application/rss+xml"/>
 		<author><![CDATA[Y Combinator]]></author>
 		<copyright><![CDATA[Y Combinator]]></copyright>
@@ -20,6 +20,22 @@
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="Technology"/>
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/23401959/23401959-1715188660604-894894aeaa81c.jpg"/>
+		<item>
+			<title><![CDATA[How To Build A Jet Engine From Scratch]]></title>
+			<description><![CDATA[<p>On November 21, 2026, Boom Supersonic (YC W16) fired their prototype engine core for the first time.</p><p><br></p><p>They&#39;re developing a shared core for two products: Superpower, a natural-gas turbine for AI data centers, and Symphony, the engine intended for the Overture supersonic airliner. The turbine business could help fund Overture while giving Symphony years of real-world operating data before it ever flies.</p><p><br></p><p>In this episode of Hard Tech, Boom founder and CEO Blake Scholl shows YC&#39;s Jared Friedman around their new Superpower Superfactory in Colorado and explains how they’re building a jet engine from scratch.</p><p><br></p><p>On the factory floor, we explore in-house manufacturing, the challenge of making turbine blades survive extreme heat, and the custom software Boom uses to design and iterate on engine parts.</p>
+]]></description>
+			<link>https://podcasters.spotify.com/pod/show/ycombinator/episodes/How-To-Build-A-Jet-Engine-From-Scratch-e3suqkc</link>
+			<guid isPermaLink="false">24c46131-e4f1-4f43-97d2-5de83de089ae</guid>
+			<dc:creator><![CDATA[Y Combinator]]></dc:creator>
+			<pubDate>Tue, 24 Nov 2026 17:13:52 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/8c1524bc/podcast/play/130033740/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-24%2F437527709-44100-2-32eca6510f9318.mp3" length="15239626" type="audio/mpeg"/>
+			<itunes:summary>&lt;p&gt;On November 21, 2026, Boom Supersonic (YC W16) fired their prototype engine core for the first time.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;They&amp;#39;re developing a shared core for two products: Superpower, a natural-gas turbine for AI data centers, and Symphony, the engine intended for the Overture supersonic airliner. The turbine business could help fund Overture while giving Symphony years of real-world operating data before it ever flies.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;In this episode of Hard Tech, Boom founder and CEO Blake Scholl shows YC&amp;#39;s Jared Friedman around their new Superpower Superfactory in Colorado and explains how they’re building a jet engine from scratch.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;On the factory floor, we explore in-house manufacturing, the challenge of making turbine blades survive extreme heat, and the custom software Boom uses to design and iterate on engine parts.&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:52</itunes:duration>
+			<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/23401959/23401959-1795540043261-5bee0c9cdefb3.jpg"/>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title><![CDATA[How To Build The Future: Eric Glyman, Co-CEO of Ramp]]></title>
 			<description><![CDATA[<p>Ramp started with a simple promise: help companies save time and money. Seven years later, it’s a $60 billion platform running the financial operations of tens of thousands of businesses, with more than $2 billion in annual revenue.Now, Ramp is using AI not just inside its products, but to rethink how the company itself works.On this episode of How to Build the Future, Ramp co-founder and CEO Eric Glyman joins Garry Tan to talk about the company’s journey from its earliest days and how AI has made some people at Ramp radically more productive. That shift led Ramp to rethink how work gets done across the organization, and Eric believes it could eventually let even large companies move with the speed of startups again.</p>
