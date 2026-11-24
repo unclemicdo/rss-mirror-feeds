@@ -45,7 +45,9 @@ def validate(body: bytes) -> dict:
             raise ValueError("rss root without <channel>")
         items = channel.findall("item")
     else:
-        items = root.findall("entry")
+        # Atom entries are namespaced ({http://www.w3.org/2005/Atom}entry);
+        # findall("entry") would match zero elements.
+        items = [el for el in root if local(el.tag) == "entry"]
 
     if not items:
         raise ValueError("feed has no entries")
