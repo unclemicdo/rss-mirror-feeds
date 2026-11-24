@@ -30,6 +30,18 @@ FEEDS = [
         "enabled": True,
     },
     {
+        "name": "feed_oreilly_radar",
+        "type": "mirror",
+        "url": "https://www.oreilly.com/radar/feed/",
+        "enabled": True,
+    },
+    {
+        "name": "feed_smallbiztrends",
+        "type": "mirror",
+        "url": "https://smallbiztrends.com/feed/",
+        "enabled": True,
+    },
+    {
         "name": "feed_anthropic_engineering",
         "type": "generate",
         "generator": "anthropic",
