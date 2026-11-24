@@ -20,6 +20,8 @@ the repo only sees commits for real content changes.
 | Anthropic Engineering | [feed_anthropic_engineering.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_anthropic_engineering.xml) |
 | Anthropic News | [feed_anthropic_news.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_anthropic_news.xml) |
 | Andrej Karpathy Blog | [feed_karpathy.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_karpathy.xml) |
+| O'Reilly Radar | [feed_oreilly_radar.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_oreilly_radar.xml) |
+| Small Business Trends | [feed_smallbiztrends.xml](https://cdn.jsdelivr.net/gh/unclemicdo/rss-mirror-feeds@main/feeds/feed_smallbiztrends.xml) |
 
 Copy the link into any podcast or RSS app. Entry GUIDs are preserved, so
 switching your subscription to this mirror does not re-mark old items as new.
