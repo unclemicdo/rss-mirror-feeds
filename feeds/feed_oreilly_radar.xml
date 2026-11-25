@@ -15,7 +15,7 @@
 	<atom:link href="https://www.oreilly.com/radar/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.oreilly.com/radar</link>
 	<description>Now, next, and beyond: Tracking need-to-know trends at the intersection of business and technology</description>
-	<lastBuildDate>Tue, 24 Nov 2026 16:53:28 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 25 Nov 2026 18:43:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -31,6 +31,200 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Assessing AI Impact: Notes for Your CFO</title>
+		<link>https://www.oreilly.com/radar/assessing-ai-impact-notes-for-your-cfo/</link>
+				<comments>https://www.oreilly.com/radar/assessing-ai-impact-notes-for-your-cfo/#respond</comments>
+				<pubDate>Wed, 25 Nov 2026 18:43:31 +0000</pubDate>
+					<dc:creator><![CDATA[James Shore]]></dc:creator>
+						<category><![CDATA[AI & ML]]></category>
+		<category><![CDATA[Business Strategy]]></category>
+		<category><![CDATA[Measuring IT / Software]]></category>
+		<category><![CDATA[Commentary]]></category>
+
+		<guid isPermaLink="false">https://www.oreilly.com/radar/?p=20301</guid>
+
+		
+					<media:content 
+				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Assessing-AI-impact-Notes-for-your-CFO-image-created-with-ChatGPT.png" 
+				medium="image" 
+				type="image/png" 
+				width="1755" 
+				height="896" 
+			/>
+
+			<media:thumbnail 
+				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Assessing-AI-impact-Notes-for-your-CFO-image-created-with-ChatGPT-160x160.png" 
+				width="160" 
+				height="160" 
+			/>
+		
+		
+				<description><![CDATA[The following article was originally published on James Shore’s Successful Software blog and is being republished here with the author’s permission. Hi there. This is the epilogue to my series on assessing the impact of AI-assisted software development. It brings all the concepts together into one whole. It’s also good for sharing with your CFO [&#8230;]]]></description>
+								<content:encoded><![CDATA[
+<p class="wp-block-paragraph"><em>The following article was originally published on James Shore’s</em> <a href="https://www.jamesshore.com/v2/blog/2026/assessing-ai-impact-notes-for-your-cfo" target="_blank" rel="noopener">Successful Software</a> <em>blog and is being republished here with the author’s permission.</em></p>
+
+
+
+<p class="wp-block-paragraph">Hi there.</p>
+
+
+
+<p class="wp-block-paragraph">This is the epilogue to my series on assessing the impact of AI-assisted software development. It brings all the concepts together into one whole. It’s also good for sharing with your CFO and other members of your leadership team.</p>
+
+
+
+<p class="wp-block-paragraph">You can find the beginning of the series here: <a href="https://www.jamesshore.com/v2/blog/2026/are-you-getting-your-moneys-worth-from-ai?source=epilogue" target="_blank" rel="noopener">Are You Getting Your Money’s Worth from AI?</a> The rest of the articles are linked below.</p>
+
+
+
+<p class="wp-block-paragraph">Comfy? Great. Let’s get started.</p>
+
+
+
+<h2 class="wp-block-heading">Give me the shortest possible version</h2>
+
+
+
+<p class="wp-block-paragraph">AI-assisted software development is expensive, and while the potential returns are high, they’re not yet proven. The field is changing rapidly, so learning the right approach requires experimentation and measurement. Spending varies by an order of magnitude: from hundreds of dollars per person per month to thousands. To know which approach is best, you need to measure impact as well as costs.</p>
+
+
+
+<p class="wp-block-paragraph">The fullest view involves modeling the ROI of your software initiatives, which requires leadership support and cross-departmental participation. For a faster and more targeted view, ask your engineering leaders to measure changes in software development speed. But don’t just look at what you’re getting now; consider the long-term effects of unintended consequences and the possibility of lock-in.</p>
+
+
+
+<h2 class="wp-block-heading">Say more about AI program fundamentals</h2>
+
+
+
+<p class="wp-block-paragraph">Measuring the costs of an AI-assisted software development program is fairly easy, but measuring benefits is harder. It’s tempting to use easy, shallow approaches that don’t consider the full picture.</p>
+
+
+
+<p class="wp-block-paragraph">Some token costs are heavily subsidized, so prices could go up. Examples include subscriptions with generous token allowances and temporary promotions. On the other hand, competition could drive prices down. As you forecast ROI, consider optimistic and pessimistic cost scenarios.</p>
+
+
+
+<p class="wp-block-paragraph">Consider that the fastest approaches might not be the most cost-effective. The best investment might involve lower per-person delivery speed, but much lower token costs, especially if the money for AI comes at the cost of headcount.</p>
+
+
+
+<p class="wp-block-paragraph"><em>Read more about why you should measure impact, and what you shouldn’t measure, in</em> <em><a href="https://www.jamesshore.com/v2/blog/2026/are-you-getting-your-moneys-worth-from-ai?source=epilogue" target="_blank" rel="noopener">part 1</a>.</em></p>
+
+
+
+<h2 class="wp-block-heading">What was that about modeling ROI?</h2>
+
+
+
+<p class="wp-block-paragraph">Most organizations primarily think in terms of cost and predictability, with minimal attention to value. Modeling ROI will not only help you understand AI’s impact, it will give you a better understanding of your software development efforts in general.</p>
+
+
+
+<p class="wp-block-paragraph">Product development can create a model that calculates an initiative’s net present value. This requires cross-departmental participation, backing from leadership and finance, and some educated guesses. It will never reflect real value perfectly—it involves too many guesses and assumptions—but it makes those assumptions concrete and focuses people on what you’re getting for your money.</p>
+
+
+
+<p class="wp-block-paragraph"><em>Read more about modeling software’s business impact in</em> <em><a href="https://www.jamesshore.com/v2/blog/2026/modeling-softwares-business-impact?source=epilogue" target="_blank" rel="noopener">part 4</a>.</em></p>
+
+
+
+<h2 class="wp-block-heading">I just want to know if AI is faster</h2>
+
+
+<div class="wp-block-image">
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b072f80125d8&quot;}" data-wp-interactive="core/image" data-wp-key="6b072f80125d8" class="aligncenter size-large wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1600" height="993" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-12-1600x993.png" alt="I just want to know if AI is faster" class="wp-image-20302" style="aspect-ratio:1.6124031007751938" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-12-1600x993.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-12-300x186.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-12-767x476.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-12-1536x953.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-12.png 1920w" sizes="(max-width: 1600px) 100vw, 1600px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+</div>
+
+
+<p class="wp-block-paragraph">Engineering leaders can get a narrower read on AI’s impact by measuring how it changes software delivery speed. They can also compare one approach to another, which will allow them to find the optimal blend of speed and costs for your company.</p>
+
+
+
+<p class="wp-block-paragraph">Simplistic speed measurements abound. When evaluating claims, look for evidence of sophistication, such as randomized comparisons, and look for sustained results across numerous teams. Beware of measurements that simply count deliverables or changes in “velocity.” They’re not standardized.</p>
+
+
+
+<p class="wp-block-paragraph">The pressure to demonstrate results from AI is immense, and the stories of success that are shared in conferences and executive circles grow with each retelling. Calibrate your skepticism accordingly. Listen for how the storytellers measured impact. Look for evidence of sustained results, not cherry-picked examples.</p>
+
+
+
+<p class="wp-block-paragraph"><em>Read how to measure changes in delivery speed in</em> <em><a href="https://www.jamesshore.com/v2/blog/2026/measuring-ais-impact-on-delivery-speed?source=epilogue" target="_blank" rel="noopener">part 2</a>.</em></p>
+
+
+
+<h2 class="wp-block-heading">What about unintended consequences and lock-in?</h2>
+
+
+<div class="wp-block-image">
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b072f8012ebb&quot;}" data-wp-interactive="core/image" data-wp-key="6b072f8012ebb" class="aligncenter size-large wp-lightbox-container"><img decoding="async" width="1600" height="989" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-13-1600x989.png" alt="Spending efficiency (lower is better)" class="wp-image-20303" style="aspect-ratio:1.6207792207792209" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-13-1600x989.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-13-767x474.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-13-300x185.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-13-1536x950.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-13.png 1920w" sizes="(max-width: 1600px) 100vw, 1600px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			data-wp-bind--aria-label="state.thisImage.triggerButtonAriaLabel"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.thisImage.buttonRight"
+			data-wp-style--top="state.thisImage.buttonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+</div>
+
+
+<p class="wp-block-paragraph">Speed is only part of the picture. If AI makes software development faster, but increases cost of change, it could end up costing you more than it saves. Lock-in is a risk too: If you’re locked in, and AI token costs increase, you could be stuck with a choice between a big bill or cutting back on development.</p>
+
+
+
+<p class="wp-block-paragraph">Look for evidence that your team is considering unintended consequences. This guide recommends tracking cost of change over time. The data is noisy, so you should also look for models that explore scenarios around topics such as maintenance costs and turnover, as well as management of associated risks.</p>
+
+
+
+<p class="wp-block-paragraph"><em>Read how to measure and model unintended consequences in</em> <em><a href="https://www.jamesshore.com/v2/blog/2026/measuring-ais-unintended-consequences?source=epilogue" target="_blank" rel="noopener">part 3</a>.</em></p>
+
+
+
+<h2 class="wp-block-heading">Be careful of measurement dysfunction</h2>
+
+
+
+<p class="wp-block-paragraph">Performance metrics always risk measurement dysfunction, and some of these metrics are particularly prone to misuse. Don’t establish a performance measurement program and leave it running. Instead, use these metrics to determine how well a particular approach to AI is working. Whatever you do, don’t use them to measure the performance of teams or individuals. Measure the <em>approach</em> instead, learn from it, and stop measuring.</p>
+
+
+
+<h2 class="wp-block-heading">Thanks for reading</h2>
+
+
+
+<p class="wp-block-paragraph">This concludes my series on assessing the impact of AI on software development. As you’ve seen, it’s a lot more complicated than just throwing some numbers up on a dashboard. As always with software development, you need to consider the system as a whole, and how changes <em>here</em> affect outcomes <em>there</em>.</p>
+
+
+
+<p class="wp-block-paragraph">Doing this right takes some work. Given the stakes, though—a substantial percentage of your budget, but also the potential for a substantial increase in productivity—it’s worth doing right.</p>
+
+
+
+<p class="wp-block-paragraph">This series is based on my work on introducing AI while I was VP of engineering. Ultimately, I wanted to measure impact so I could make smarter decisions about how we used AI. If you’d like my help with your organization, send me an email. If you’d rather go it alone, this series will get you off to a good start. Either way, best wishes, and let me know how it goes.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://www.oreilly.com/radar/assessing-ai-impact-notes-for-your-cfo/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
 		<title>Trusting an Agent Beyond Your Expertise</title>
 		<link>https://www.oreilly.com/radar/trusting-an-agent-beyond-your-expertise/</link>
 				<comments>https://www.oreilly.com/radar/trusting-an-agent-beyond-your-expertise/#respond</comments>
@@ -114,7 +308,7 @@
 
 
 <div class="wp-block-image">
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6b05c12663008&quot;}" data-wp-interactive="core/image" data-wp-key="6b05c12663008" class="aligncenter size-large wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1600" height="1493" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1600x1493.png" alt="Illustrative positions for particular tasks. The Pi’s position reflects my assessment of the consequences. New dependencies or better understanding can change that assessment." class="wp-image-20298" style="aspect-ratio:1.0707456978967496" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1600x1493.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-300x280.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-767x716.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1536x1433.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11.png 2048w" sizes="(max-width: 1600px) 100vw, 1600px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b072f8015ca8&quot;}" data-wp-interactive="core/image" data-wp-key="6b072f8015ca8" class="aligncenter size-large wp-lightbox-container"><img decoding="async" width="1600" height="1493" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1600x1493.png" alt="Illustrative positions for particular tasks. The Pi’s position reflects my assessment of the consequences. New dependencies or better understanding can change that assessment." class="wp-image-20298" style="aspect-ratio:1.0707456978967496" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1600x1493.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-300x280.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-767x716.png 767w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11-1536x1433.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-11.png 2048w" sizes="(max-width: 1600px) 100vw, 1600px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -427,7 +621,7 @@
 
 
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/_JiiOzqYik4?si=q_mfklXzmHeOeYHt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" width="800" height="450" src="https://www.youtube.com/embed/_JiiOzqYik4?si=q_mfklXzmHeOeYHt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
@@ -790,7 +984,7 @@
 
 
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/PzDsii6FWGQ?si=zOEzJzztfzxevdWi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" width="800" height="450" src="https://www.youtube.com/embed/PzDsii6FWGQ?si=zOEzJzztfzxevdWi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
@@ -1037,7 +1231,7 @@ print(t.tokenize(' strawberry'), t.tokenize('strawberry'))"</code></pre>
 
 
 <div class="wp-block-image">
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6b05c1267315c&quot;}" data-wp-interactive="core/image" data-wp-key="6b05c1267315c" class="aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1600" height="1248" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png" alt="Be the watermark" class="wp-image-20261" style="aspect-ratio:1.2813141683778233" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-300x234.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-768x599.png 768w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1536x1198.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10.png 1800w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b072f8023d27&quot;}" data-wp-interactive="core/image" data-wp-key="6b072f8023d27" class="aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1600" height="1248" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png" alt="Be the watermark" class="wp-image-20261" style="aspect-ratio:1.2813141683778233" srcset="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1600x1248.png 1600w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-300x234.png 300w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-768x599.png 768w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10-1536x1198.png 1536w, https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/image-10.png 1800w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -2668,225 +2862,15 @@ print(t.tokenize(' strawberry'), t.tokenize('strawberry'))"</code></pre>
 							<wfw:commentRss>https://www.oreilly.com/radar/podcast/generative-ai-in-the-real-world-memory-for-personal-ai-with-duncan-davidson/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 							</item>
-		<item>
-		<title>Why Git Needs Help: Moving from Files to Systems for Source Control</title>
-		<link>https://www.oreilly.com/radar/why-git-needs-help-moving-from-files-to-systems-for-source-control/</link>
-				<comments>https://www.oreilly.com/radar/why-git-needs-help-moving-from-files-to-systems-for-source-control/#respond</comments>
-				<pubDate>Thu, 12 Nov 2026 11:54:27 +0000</pubDate>
-					<dc:creator><![CDATA[Jason Davenport]]></dc:creator>
-						<category><![CDATA[AI Agents]]></category>
-		<category><![CDATA[Git]]></category>
-		<category><![CDATA[Version Control System]]></category>
-		<category><![CDATA[Commentary]]></category>
-
-		<guid isPermaLink="false">https://www.oreilly.com/radar/?p=20215</guid>
-
-		
-					<media:content 
-				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Why-Git-needs-help-image-created-with-Gemini-scaled.jpeg" 
-				medium="image" 
-				type="image/jpeg" 
-				width="2560" 
-				height="1429" 
-			/>
-
-			<media:thumbnail 
-				url="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/11/Why-Git-needs-help-image-created-with-Gemini-160x160.jpeg" 
-				width="160" 
-				height="160" 
-			/>
-		
-		
-				<description><![CDATA[The shift to agentic reality When Git was designed in 2005, Linus Torvalds solved a brilliant problem for humans collaborating over terminal windows by trading line-by-line diffs. Fast-forward to 2026: Autonomous coding agents don’t think in flat text files or line breaks. They reason across syntax trees, execution traces, call graphs, and type constraints. In [&#8230;]]]></description>
-								<content:encoded><![CDATA[
-<h2 class="wp-block-heading">The shift to agentic reality</h2>
-
-
-
-<p class="wp-block-paragraph">When Git was designed in 2005, Linus Torvalds solved a brilliant problem for humans collaborating over terminal windows by trading line-by-line diffs. Fast-forward to 2026: Autonomous coding agents don’t think in flat text files or line breaks. They reason across syntax trees, execution traces, call graphs, and type constraints. In my view, forcing an AI agent to engineer complex distributed systems through string matching is like handing a chief software architect a chisel and a stack of sticky notes.</p>
-
-
-
-<h3 class="wp-block-heading">File-centric versus system-centric paradigm shift</h3>
-
-
-
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>Dimension</strong></th><th><strong>Legacy file-centric (Git)</strong></th><th><strong>Agent-native system graph</strong></th></tr></thead><tbody><tr><td><strong>Representation</strong></td><td>Flat Unicode text streams</td><td>Tree-Sitter ASTs &amp; CPG nodes</td></tr><tr><td><strong>Mutation unit</strong></td><td>Line-by-line string diffs</td><td>AST node transformations</td></tr><tr><td><strong>Context overhead</strong></td><td>2,000+ line prompt context fills</td><td>Sub-50 token targeted node payloads</td></tr><tr><td><strong>State persistence</strong></td><td>Ephemeral model prompt windows</td><td>Execution ledgers &amp; reasoning chains</td></tr></tbody></table></figure>
-
-
-
-<p class="wp-block-paragraph">Whenever I see engineers try to lock context-blind models into file-centric version control, I watch the consequences compound quickly. Context windows fill with irrelevant churn, API bills surge, and subtle, multifile structural breakages slip past basic syntax checks. Just as critically, standard Git discards the cognitive history of a change. The moment an agent session completes, its execution logs, compiler feedback, and discarded hypotheses evaporate into thin air.</p>
-
-
-
-<h3 class="wp-block-heading">Tactical illustration: renaming a distributed method signature</h3>
-
-
-
-<p class="wp-block-paragraph">Consider updating a core helper signature across 40 dependent services. A traditional string diff forces the agent to read and mutate thousands of lines of surrounding boilerplate text, burning thousands of context tokens per file:</p>
-
-
-
-<pre class="wp-block-code"><code>--- a/services/auth.py
-+++ b/services/auth.py
-@@ -42,7 +42,7 @@ class AuthManager:
-     def validate_session(self, token: str) -&gt; UserSession:
--        return fetch_user_by_token(token)
-+        return fetch_user_by_token(token, include_metadata=True)
-</code></pre>
-
-
-
-<p class="wp-block-paragraph">In contrast, an AST mutation node isolates the target function symbol, executing the change precisely without passing unneeded ambient text through the prompt window:</p>
-
-
-
-<pre class="wp-block-code"><code>{
-  "action": "mutate_node",
-  "target_ast_id": "ast_node_89f2a41b",
-  "symbol": "fetch_user_by_token",
-  "update": {
-    "add_argument": { "name": "include_metadata", "value": true }
-  }
-}
-</code></pre>
-
-
-
-<p class="wp-block-paragraph">This exact bottleneck hit Anthropic in late 2026. As autonomous agent activity pushed monorepo merges beyond 30,000 per day, conventional Git infrastructure simply buckled under the load. To me, unlocking genuine agentic autonomy requires evolving source control along two complementary tracks: shifting to server-hosted, graph-aware architectures, and treating agent reasoning as a first-class, versioned artifact right alongside the code itself.</p>
-
-
-
-<h2 class="wp-block-heading">Why text diffs and ephemeral sessions create silent debt</h2>
-
-
-
-<p class="wp-block-paragraph">Standard diff tools operate purely on raw Unicode strings. When an agent reorders functions or cleans up formatting, string diffs pollute context windows with noise while remaining blind to structural reality. If you modify a single method signature, Git won’t warn you about the dozen callers broken across separate modules. From my experience, feeding 2,000-line source files into prompts just to update a 5-line helper method degrades model attention, burns compute, and inflates overhead at scale.</p>
-
-
-
-<h3 class="wp-block-heading">Text diffs versus AST graph mutations</h3>
-
-
-
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>Metric / behavior</strong></th><th><strong>Text diff (unified patch)</strong></th><th><strong>AST graph mutation</strong></th></tr></thead><tbody><tr><td><strong>Formatting resilience</strong></td><td>Breaks on whitespace or line-ending changes</td><td>Immune to syntax formatting shifts</td></tr><tr><td><strong>Impact analysis</strong></td><td>Post hoc CI test failures</td><td>Sub-second static call-graph resolution</td></tr><tr><td><strong>Token consumption</strong></td><td>O(file_size) per prompt iteration</td><td>O(node_delta) per targeted change</td></tr></tbody></table></figure>
-
-
-
-<p class="wp-block-paragraph">Compounding this structural blind spot is what I consider our biggest waste: ephemeral session memory. Whenever an agent finishes a task or compacts its context window, its entire diagnostic history—failed attempts, shell outputs, and compiler warnings—disappears. The next agent assigned to the branch steps in completely blind, doomed to repeat the same diagnostic dead ends and burn unnecessary tokens.</p>
-
-
-
-<h2 class="wp-block-heading">Agent-native architectures in practice</h2>
-
-
-
-<p class="wp-block-paragraph">In my view, next-generation version control must replace raw file trees with Tree-sitter parsers and code property graphs (CPGs). Instead of editing lines on disk, agents mutate specific syntax nodes directly, executing sub-second edits and running immediate dependency impact checks across the codebase. Moving control back to the server eliminates the massive I/O bottlenecks caused by checking out heavy working trees onto virtual machines, allowing agents to query and update code over fast graph end points.</p>
-
-
-
-<h3 class="wp-block-heading">Practical implementation: server-side microdiff stream</h3>
-
-
-
-<p class="wp-block-paragraph">Below is an example payload representing an atomic microdiff layer executed directly on a server-hosted code property graph, bypassing local file checkouts entirely:</p>
-
-
-
-<pre class="wp-block-code"><code>{
-  "commit_id": "c_9011f4a2",
-  "parent_graph_version": "v14.2.0",
-  "operations": &#91;
-    {
-      "op": "replace_node_property",
-      "node_uri": "cpg://auth_service/ast/Node_441",
-      "property": "return_type",
-      "value": "Promise&lt;UserSession&gt;"
-    }
-  ],
-  "validation_hash": 
-  "sha256_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-}
-</code></pre>
-
-
-
-<p class="wp-block-paragraph">This structural shift pairs naturally with stacked microdiffs—atomic, dependent layers verified sequentially in isolated virtual workspaces to prevent merge races. I was particularly impressed seeing the real-world impact of this pattern with Anthropic’s Scion architecture. Faced with object-store locks and clone latencies as daily merges scaled 10x, Anthropic built a server-centric SCM that streams code graphs on demand, slashing infrastructure overhead by 200x while enabling near-instant workspace initialization.</p>
-
-
-
-<h2 class="wp-block-heading">Versioning reasoning and system memory</h2>
-
-
-
-<p class="wp-block-paragraph">I strongly believe code changes alone rarely capture full intent. Modern SCM must link model reasoning traces, prompt chains, and decision graphs directly to commit nodes, preserving architectural context for future debugging and audits. Persisting build outputs, compiler logs, and linter runs in execution ledgers attached to commit trees allows subsequent agents to inspect prior test results instantly rather than rerunning identical test suites.</p>
-
-
-
-<h3 class="wp-block-heading">System memory schema: reasoning and execution ledger</h3>
-
-
-
-<p class="wp-block-paragraph">To prevent model sessions from repeating diagnostic dead ends, execution ledgers append structured reasoning and compiler feedback directly to commit nodes:</p>
-
-
-
-<pre class="wp-block-code"><code>{
-  "agent_session_id": "sess_88190c2a",
-  "target_commit": "c_9011f4a2",
-  "hypothesis_tree": {
-    "attempt_1": { "approach": "In-memory caching", "status": "REJECTED", 
-    "reason": "Memory limit exceeded in integration test" },
-    "attempt_2": { "approach": "Redis backing store", "status": 
-    "VERIFIED", "execution_time_ms": 142 }
-  },
-  "compiler_ledger": {
-    "linter_passed": true,
-    "type_check_errors": 0
-  }
-}
-</code></pre>
-
-
-
-<p class="wp-block-paragraph">By explicitly recording abandoned branches and failed architectural hypotheses as structured metadata, we stop future agent sessions from reexploring invalid paths. I argue that capturing thought streams alongside code transforms source control from a passive text archive into an active memory system.</p>
-
-
-
-<h2 class="wp-block-heading">The hard engineering trade-offs and counterarguments</h2>
-
-
-
-<p class="wp-block-paragraph">I won’t pretend making this transition is easy; it comes with steep engineering trade-offs. Existing developer tooling, from LSPs to build pipelines and IDEs, expects standard local file trees. Replacing checkouts with server-hosted graphs requires building heavy compatibility layers or redesigning workflows. Furthermore, human reviewers still digest code line by line, creating a natural tension with pure graph mutations, while storing continuous thought streams drives up storage and compliance costs. During early refactoring, syntax is often broken and unparseable, forcing systems to temporarily fall back to raw text. Overcoming Git’s decades of deep ecosystem lock-in remains a major operational hurdle we cannot ignore.</p>
-
-
-
-<h3 class="wp-block-heading">Trade-off matrix: architectural migration challenges</h3>
-
-
-
-<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th><strong>Challenge</strong></th><th><strong>Systemic bottleneck</strong></th><th><strong>Mitigation strategy</strong></th></tr></thead><tbody><tr><td><strong>IDE &amp; tooling lock-in</strong></td><td>LSPs expect local file system layouts</td><td>Virtual FUSE layers streaming AST nodes on demand</td></tr><tr><td><strong>Storage overhead</strong></td><td>Persisting continuous reasoning logs increases storage 10x</td><td>Compacting execution ledgers into summary trees</td></tr><tr><td><strong>Broken syntax states</strong></td><td>AST parsers fail during active multiline refactoring</td><td>Fallback to temporary text buffer zones during edits</td></tr></tbody></table></figure>
-
-
-
-<h2 class="wp-block-heading">Bottom line</h2>
-
-
-
-<p class="wp-block-paragraph">Git was designed for humans reviewing text, but agentic scale demands server-centric, graph-aware source control. Code property graphs stop token bloat and prevent silent structural breakages. Versioning reasoning traces and execution histories alongside code keeps agents from repeating past mistakes. And stacked microdiffs offer a clean, isolated path for autonomous agents to ship code safely at scale.</p>
-]]></content:encoded>
-							<wfw:commentRss>https://www.oreilly.com/radar/why-git-needs-help-moving-from-files-to-systems-for-source-control/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-							</item>
 	</channel>
 </rss>
 
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
 
-Object Caching 84/92 objects using Memcached
+Object Caching 89/92 objects using Memcached
 Page Caching using Disk: Enhanced (Page is feed) 
 Minified using Memcached
 
-Served from: www.oreilly.com @ 2026-11-24 16:53:58 by W3 Total Cache
+Served from: www.oreilly.com @ 2026-11-25 18:57:04 by W3 Total Cache
 -->
